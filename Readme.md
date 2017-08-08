@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Vladimir Semyonov](https://up.htmlacademy.ru/htmlcss/18/user/58409).
-* Наставник: `Неизвестно`.
+* Наставник: [Vladimir Semyonov](https://up.htmlacademy.ru/htmlcss/18/user/58409).
 
 ---
 
