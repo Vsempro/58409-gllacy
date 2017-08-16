@@ -284,7 +284,6 @@ a.cart-link {
 }
 
 .input-outline {
-  display: none;
   position: absolute;
   width: 341px;
   height: 84px;
@@ -307,10 +306,6 @@ a.cart-link {
 
 .button--search:hover {
   background: #f8f7f4 url("../img/search_hover.png") center center no-repeat;
-}
-
-.button--search:hover ~ .input-outline {
-  display: block;
 }
 
 .search-input {

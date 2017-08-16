@@ -140,99 +140,99 @@
         </section>
         <div class="content container clearfix">
           <article class="content__news">
-            <h2>Новое в нашем блоге</h3>
-                        <a class="news-title" href="#">10  способов сервировки фруктовых щербетов к столу</a>
-                    </article>
-                    <div class="content__subscription">
-                        <h2 class="visually-hidden">Подписка</h2>
+            <h2>Новое в нашем блоге</h2>
+            <a class="news-title" href="#">10  способов сервировки фруктовых щербетов к столу</a>
+          </article>
+          <div class="content__subscription">
+            <h2 class="visually-hidden">Подписка</h2>
             <p class="subscription-offer">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
             <form class="subscription-form" action="index.html" method="post">
               <input type="email" name="useremaill" value="" placeholder="Электронная почта">
               <button class="button button--send" type="submit" name="button">Отправить</button>
             </form>
+          </div>
         </div>
-    </div>
-    <section class="map">
-      <h2 class="visually-hidden">Карта проезда</h2>
-      <div class="container">
-        <div class="contacts">
-          <h4>Адрес главного офиса и офлайн магазина:</h4>
-          <p><b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
-          <h4>Для заказов по телефону:</h4>
-          <p>
-            <b>8 812 450-25-25</b> (с 10 до 20 ежедневно)
-          </p>
-          <a class="button" href="#feedback">Форма обратной связи</a>
-        </div>
-      </div>
-    </section>
-    </main>
-    <footer class="main-footer container clearfix">
-      <ul class="main-footer__social">
-        <li>
-          <a class="social-button" href="#">Твиттер</a>
-        </li>
-        <li>
-          <a class="social-button" href="#">Инстаграм</a>
-        </li>
-        <li>
-          <a class="social-button" href="#">Фейсбук</a>
-        </li>
-        <li>
-          <a class="social-button" href="#">ВКонтакте</a>
-        </li>
-      </ul>
-      <nav class="main-footer__nav">
-        <ul class="clearfix">
+        <section class="map">
+          <h2 class="visually-hidden">Карта проезда</h2>
+          <div class="container">
+            <div class="contacts">
+              <h4>Адрес главного офиса и офлайн магазина:</h4>
+              <p><b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
+              <h4>Для заказов по телефону:</h4>
+              <p>
+                <b>8 812 450-25-25</b> (с 10 до 20 ежедневно)
+              </p>
+              <a class="button" href="#feedback">Форма обратной связи</a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="main-footer container clearfix">
+        <ul class="main-footer__social">
           <li>
-            <a class="contractors" href="#">Для поставщиков</a>
+            <a class="social-button" href="#">Твиттер</a>
           </li>
           <li>
-            <a class="documents" href="#">Наши документы</a>
+            <a class="social-button" href="#">Инстаграм</a>
           </li>
           <li>
-            <a class="manufacturing" href="#">О производстве</a>
+            <a class="social-button" href="#">Фейсбук</a>
           </li>
           <li>
-            <a class="standards" href="#">Экологические стандарты</a>
+            <a class="social-button" href="#">ВКонтакте</a>
           </li>
         </ul>
-      </nav>
-      <p class="main-footer__copyright">Сделано в
-        <a href="#">HTML Academy</a> © 2017</p>
-    </footer>
+        <nav class="main-footer__nav">
+          <ul class="clearfix">
+            <li>
+              <a class="contractors" href="#">Для поставщиков</a>
+            </li>
+            <li>
+              <a class="documents" href="#">Наши документы</a>
+            </li>
+            <li>
+              <a class="manufacturing" href="#">О производстве</a>
+            </li>
+            <li>
+              <a class="standards" href="#">Экологические стандарты</a>
+            </li>
+          </ul>
+        </nav>
+        <p class="main-footer__copyright">Сделано в
+          <a href="#">HTML Academy</a> © 2017</p>
+      </footer>
+    </div>
   </div>
-  </div>
+  <section class="modal modal--login" id="login">
+    <h2 class="visually-hidden">Личный кабинет</h2>
+    <form class="login-form" action="index.html" method="post">
+      <p>
+        <input class="access-input" type="email" placeholder="Электронная почта">
+      </p>
+      <p>
+        <input class="password-input" type="password" placeholder="Пароль">
+      </p>
+      <button class="button button--access" type="submit">Войти</button>
+      <p class="form-footer clearfix">
+        <a href="#">Забыли пароль?</a>
+        <a href="#">Новая регистрация</a>
+      </p>
+    </form>
+  </section>
+  <section class="modal modal--feedback" id="feedback">
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <p><b>Мы обязательно вам ответим!</b></p>
+    <form class="form-feedback" action="index.html" method="post">
+      <p>
+        <input type="text" placeholder="Как вас зовут?">
+      </p>
+      <p>
+        <input type="email" placeholder="Ваша почта для ответа">
+      </p>
+      <textarea name="message" cols="30" rows="10">Напишите что-нибудь...</textarea>
+      <button class="button button--feedback" type="submit">Отправить</button>
+    </form>
+  </section>
 </body>
-<section class="modal modal--login" id="login">
-  <h2 class="visually-hidden">Личный кабинет</h2>
-  <form class="login-form" action="index.html" method="post">
-    <p>
-      <input class="access-input" type="email" placeholder="Электронная почта">
-    </p>
-    <p>
-      <input class="password-input" type="password" placeholder="Пароль">
-    </p>
-    <button class="button button--access" type="submit">Войти</button>
-    <p class="form-footer clearfix">
-      <a href="#">Забыли пароль?</a>
-      <a href="#">Новая регистрация</a>
-    </p>
-  </form>
-</section>
-<section class="modal modal--feedback" id="feedback">
-  <h2 class="visually-hidden">Форма обратной связи</h2>
-  <p><b>Мы обязательно вам ответим!</b></p>
-  <form class="form-feedback" action="index.html" method="post">
-    <p>
-      <input type="text" placeholder="Как вас зовут?">
-    </p>
-    <p>
-      <input type="email" placeholder="Ваша почта для ответа">
-    </p>
-    <textarea name="message" id="" cols="30" rows="10">Напишите что-нибудь...</textarea>
-    <button class="button button--feedback" type="submit">Отправить</button>
-  </form>
-</section>
 
 </html>
