@@ -88,6 +88,7 @@ body > input[type="radio"] {
 .header-nav__user li {
   display: inline-block;
   vertical-align: top;
+  font-size: 14px;
 }
 
 .header-nav__site > li {
@@ -199,84 +200,26 @@ a.catalog-new::after {
 .header-nav__user a {
   display: block;
   text-decoration: none;
-  padding: 5px 12px;
-  border-radius: 30px;
+  height: 32px;
+  border-radius: 16px;
+  
+  line-height: 32px;
   color: #ffffff;
 }
 
-a.cart-link {
-  margin-right: 10px;
-  padding-right: 38px;
-  padding-left: 45px;
-  font-size: 14px;
-  background: #a1b4a9 url("../img/cart.png") 17px 7px no-repeat;
+.cart a {
+  margin-right: 10px; 
+  width: 117px;
+  text-align: center;
+  background: #a1b4a9 url("../img/basket.svg") 13px 7px no-repeat;
 }
 
-.access {
-  position: relative;
-}
-
-.access-button {
+.login a {
   margin-right: 5px;
-  width: 93px;
-  height: 32px;
-  border-radius: 50px;
-  border: none;
-  font-size: 14px;
-  background: #a1b4a9 url("../img/access.png") 16px 7px no-repeat;
-}
-
-.access-form {
-  position: absolute;
-  width: 277px;
-  height: 214px;
-  border-radius: 5px;
-  bottom: -221px;
-  left: -180px;
-  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-  background-color: #f8f7f4;
-}
-
-.access-input,
-.password-input {
-  margin-top: 18px;
-  margin-left: 18px;
-  padding-left: 13px;
-  width: 228px;
-  height: 40px;
-  border-radius: 5px;
-  border: 1px solid #d3d3d2;
-}
-
-.password-input {
-  margin-top: 20px;
-}
-
-.access-input[placeholder="Электронная почта"],
-.password-input[placeholder="Пароль"] {
-  font-size: 14px;
-  color: #999999;
-}
-
-.form-footer {
-  margin-top: 20px;
-  margin-left: 16px;
-}
-
-.button--access {
-  float: left;
-  margin-top: 2px;
-  width: 100px;
-  height: 44px;
-}
-
-.access a {
-  float: left;
-  margin-left: 21px;
-  padding: 0;
-  text-decoration: underline;
-  font-size: 13px;
-  color: #323232;
+  padding-right: 20px;
+  width: 73px;
+  text-align: right;
+  background: #a1b4a9 url("../img/entrance.svg") 13px 7px no-repeat;
 }
 
 .hidden-form {
@@ -806,6 +749,71 @@ a.manufacturing {
 
 .main-footer__copyright a {
   color: inherit;
+}
+
+.modal--login {
+  1position: fixed;
+  top: -12px;
+  right: 190px;
+}
+
+
+.login-form {
+  margin-top: 5px;
+  padding-left: 18px;
+  width: 259px;
+  height: 214px;
+  border-radius: 5px;
+   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+}
+
+.login-form p {
+  margin: 0;
+}
+
+.login-input,
+.password-input {
+  margin-top: 18px;
+  padding-left: 13px;
+  width: 228px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #d3d3d2;
+}
+
+.password-input {
+  margin-top: 20px;
+  margin-bottom: 23px;
+}
+
+.login-input[placeholder="Электронная почта"],
+.password-input[placeholder="Пароль"] {
+  font-size: 14px;
+  color: #999999;
+}
+
+.button--login {
+  display: inline-block;  
+  width: 100px;
+  height: 44px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 22px;
+}
+
+p.form-footer {
+  display: inline-block;
+  margin-left: 19px;
+  width: 125px;
+  font-size: 13px;
+  line-height: 20px;
+  
+}
+
+.form-footer a {
+  color: #323232;
 }
 
 
