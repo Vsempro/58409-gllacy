@@ -54,9 +54,9 @@
         </div>
       </header>
       <main class="main-content">
-        <h1 class="visually-hidden">Мороженое — «Глейси»</h1>
+        <h1 class="visuallyhidden">Мороженое — «Глейси»</h1>
         <section class="slider">
-          <h2 class="visually-hidden">Слайдер</h2>
+          <h2 class="visuallyhidden">Слайдер</h2>
           <div class="slide" id="slide1">
             <div class="slide__title">Крем-брюле и пломбир с малиновым джемом</div>
             <a href="" class="button button--slide">Давайте оба!</a>
@@ -76,7 +76,7 @@
           </div>
         </section>
         <section class="banners container clearfix">
-          <h2 class="visually-hidden">Баннеры</h2>
+          <h2 class="visuallyhidden">Баннеры</h2>
           <div class="banner__raspberry">
             <h3>Малинка даром!</h3>
             <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -89,7 +89,7 @@
           </div>
         </section>
         <section class="hits container clearfix">
-          <h2 class="visually-hidden">Хиты</h2>
+          <h2 class="visuallyhidden">Хиты</h2>
           <ul class="htts__list">
             <li class="catalog__item">
               <h3 class="card-product__article"><a href="catalog-item1.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
@@ -146,7 +146,7 @@
             <a class="news-title" href="#">10  способов сервировки фруктовых щербетов к столу</a>
           </article>
           <div class="content__subscription">
-            <h2 class="visually-hidden">Подписка</h2>
+            <h2 class="visuallyhidden">Подписка</h2>
             <p class="subscription-offer">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
             <form class="subscription-form" action="index.html" method="post">
               <input type="email" name="useremaill" value="" placeholder="Электронная почта">
@@ -155,7 +155,7 @@
           </div>
         </div>
         <section class="map">
-          <h2 class="visually-hidden">Карта проезда</h2>
+          <h2 class="visuallyhidden">Карта проезда</h2>
           <div class="container">
             <div class="contacts">
               <h4>Адрес главного офиса и офлайн магазина:</h4>
@@ -206,7 +206,7 @@
     </div>
   </div>
   <section class="modal modal--login" id="login">
-  <h2 class="visually-hidden">Личный кабинет</h2>
+  <h2 class="visuallyhidden">Личный кабинет</h2>
   <form class="login-form" action="index.html" method="post">
     <p>
       <input class="login-input" type="email" placeholder="Электронная почта">
@@ -222,18 +222,19 @@
   </form>
 </section>
   <section class="modal modal--feedback" id="feedback">
-    <h2 class="visually-hidden">Форма обратной связи</h2>
-    <p><b>Мы обязательно вам ответим!</b></p>
+    <h2 class="visuallyhidden">Форма обратной связи</h2>
+    <p class="lead"><b>Мы обязательно вам ответим!</b></p>
     <form class="form-feedback" action="index.html" method="post">
       <p>
-        <input type="text" placeholder="Как вас зовут?">
+        <input class="username-input" type="text" placeholder="Как вас зовут?">
       </p>
       <p>
-        <input type="email" placeholder="Ваша почта для ответа">
+        <input class="email-input" type="email" placeholder="Ваша почта для ответа?">
       </p>
-      <textarea name="message" cols="30" rows="10">Напишите что-нибудь...</textarea>
+      <textarea class="message-textarea" name="message" cols="30" rows="10">Напишите что-нибудь...</textarea>
       <button class="button button--feedback" type="submit">Отправить</button>
     </form>
+    <button class="modal-close"  type="button">Закрыть</button>
   </section>
 </body>
 
