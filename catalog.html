@@ -46,7 +46,7 @@
       <ul class="header-nav__user">
         <li class="search"><a class="search-link" href="#"><img src="img/search.png" alt="Поиск товаров"></a></li>
         <li class="access"><a class="access-link" href="#">Вход</a></li>
-        <li class="cart"><a class="cart-link" href="#cart">2 товара</a></li>
+        <li class="cart cart--user"><a class="cart-link" href="#cart">2 товара</a></li>
       </ul>
     </nav>
     <div class="header-content clearfix">
@@ -344,42 +344,34 @@
       <a href="#">HTML Academy</a> © 2017</p>
   </footer>
   <section class="modal modal--cart" id="cart">
-    <h2 class="visually-hidden">Корзина покупателя</h2>
+    <h2 class="visuallyhidden">Корзина покупателя</h2>
     <table>
       <tr>
-        <td class="modal__close">X</td>
-        <td class="modal__article">Пломбир с апельсиновым вкусом</td>
-        <td class="modal__value">1,5</td>
-        <td class="modal__dimension">кг</td>
-        <td class="operator">х</td>
-        <td class="modal__value">200</td>
-        <td class="modal__dimension">руб</td>
-        <td class="modal__result">300</td>
-        <td class="modal__dimension">руб</td>
+        <td class="cart__close cart__close--top">X</td>
+        <td class="cart__image"><img src="img/cart-item1.jpg" width="33" height="33" alt="мороженое"></td>
+        <td class="cart__article">Пломбир с апельсиновым вкусом</td>
+        <td class="cart__value">1,5</td>
+        <td class="cart__dimension">кг</td>
+        <td class="cart__operator">х</td>
+        <td class="cart__cost">200</td>
+        <td class="cart__ruble">руб.</td>
+        <td class="cart__result">300</td>
+        <td class="cart__ruble cart__ruble--total">руб.</td>
       </tr>
       <tr>
-        <td class="modal__close">X</td>
-        <td class="modal__article">Клубничный пломбир с присыпкой из белого шоколада</td>
-        <td class="modal__value">1,5</td>
-        <td class="modal__dimension">кг</td>
-        <td class="operator">х</td>
-        <td class="modal__value">300</td>
-        <td class="modal__dimension">руб</td>
-        <td class="modal__result">450</td>
-        <td class="modal__dimension">руб</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="modal__total">Итого:</td>
-        <td class="modal__value">750</td>
-        <td class="modal__dimension">руб</td>
+        <td class="cart__close cart__close--next">X</td>
+        <td class="cart__image cart__image--next"><img src="img/cart-item2.jpg" width="33" height="33" alt="мороженое"></td>
+        <td class="cart__article cart__article--next">Клубничный пломбир с присыпкой из белого шоколада</td>
+        <td class="cart__value cart__value--next">1,5</td>
+        <td class="cart__dimension cart__dimension--next">кг</td>
+        <td class="cart__operator cart__operator--next">х</td>
+        <td class="cart__cost cart__cost--next">300</td>
+        <td class="cart__ruble cart__ruble--next">руб.</td>
+        <td class="cart__result cart__result--next">450</td>
+        <td class="cart__ruble cart__ruble--next">руб.</td>
       </tr>
     </table>
+    <p class="cart__total">Итого: <span>750</span> руб.</p>
     <a class="button button--order" href="#">Оформить заказ</a>  
 </section>
 </body>

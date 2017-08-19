@@ -897,6 +897,14 @@ p.lead {
 
 /*Каталог*/
 
+.cart--user a {
+  padding-right: 20px;
+  width: 97px;
+  color: #323232;
+  text-align: right;
+  background: #f7f6f3 url("../img/basket-red.svg") 13px 7px no-repeat;
+}
+
 .main-content {
   padding-bottom: 30px;
   border-bottom: 1px solid #ffffff;
@@ -1293,4 +1301,122 @@ a.current {
 
 a.disabled {
   opacity: 0.2;
+}
+
+.modal--cart {
+  padding-top: 7px;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 510px;
+  height: 234px;
+  top: 49px;
+  right: 63px;
+  font-size: 13px;
+  line-height: 16px;
+  color: #323232;
+  border-radius: 5px;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+}
+
+.modal--cart table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  border-bottom: 1px solid #cacac7;
+}
+
+.modal--cart td {
+  vertical-align: top;  
+}
+
+td.cart__close {
+  padding-top: 20px;
+  width: 10px;
+ 
+}
+
+td.cart__close--next {
+  padding-top: 26px;
+  padding-bottom: 32px;
+}
+
+td.cart__image {
+  padding-top: 12px;
+  padding-left: 12px;
+  width: 33px;
+}
+
+.cart__image img {
+  vertical-align: top;
+}
+
+td.cart__image--next {
+  padding-top: 17px;
+}
+
+td.cart__article {
+  padding-top: 20px;
+  padding-left: 13px;
+  padding-right: 13px;
+  width: 220px;
+}
+
+td.cart__value {
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+td.cart__dimension {
+  padding-top: 20px;
+}
+td.cart__operator {
+  padding-top: 20px;
+}
+
+td.cart__cost {
+  padding-top: 20px;
+}
+
+td.cart__ruble {
+  padding-top: 20px;
+    
+}
+
+td.cart__result {
+  padding-top: 20px;
+  padding-left: 23px;
+}
+
+td.cart__ruble--total {
+  padding-right: 19px;
+}
+
+td.cart__article--next,
+td.cart__value--next,
+td.cart__dimension--next,
+td.cart__operator--next,
+td.cart__cost--next,
+td.cart__ruble--next,
+td.cart__result--next,
+td.cart__ruble--next {
+  padding-top: 26px;
+}
+
+p.cart__total {
+  margin-top: 15px;
+  text-align: right;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.button--order {
+  display: block;
+  margin-top: 17px;
+  margin-left: auto;
+  width: 170px;
+  height: 44px;
+  border-radius: 22px;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: bold;
 }
