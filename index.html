@@ -33,24 +33,22 @@
             <li class="shipping"><a class="shipping-link" href="#">Доставка и оплата</a></li>
             <li class="about"><a class="about-link" href="#">О компании</a></li>
           </ul>
+          <div class="header-nav__search">
+            <form class="search-form" action="index.html" method="get">
+              <div class="input-outline">
+                  <input class="search-input" type="search" placeholder="Что ищем?">
+              </div>
+              <button class="button--search" type="submit" name="button">Найти</button>
+            </form>
+          </div>  
           <ul class="header-nav__user">
-            <li class="search">
-              <div class="hidden-form">
-                <form class="search-form" action="index.html" method="get">
-                  <div class="input-outline">
-                      <input class="search-input" type="search" placeholder="Что ищем?">
-                  </div>
-                  <button class="button--search" type="submit" name="button"></button>
-                </form>
-              </div>  
-            </li>
             <li class="login"><a href="#login">Вход</a></li>
             <li class="cart"><a href="#">Пусто</a></li>
           </ul>
         </nav>
         <div class="header-content clearfix">
           <p class="header-content__time">С 10 до 20, ежедневно</p>
-          <a class="header-content__phone" href="tel:+78124502525">8 812 450-25-25</a>
+          <span class="visuallyhidden">Телефон для заявок: </span><a class="header-content__phone" href="tel:+78124502525">8 812 450-25-25</a>
         </div>
       </header>
       <main class="main-content">
