@@ -1328,8 +1328,13 @@ p.lead {
   color: #ffffff;
 }
 
-a.prev::before,
-a.next::before {
+.prev,
+.next {
+  font-size: 0;
+}
+
+.prev a::before,
+.next a::before {
   content: "";
   position: absolute;
   width: 8px;
@@ -1338,25 +1343,25 @@ a.next::before {
   border-right: 2px solid #ffffff;
 }
 
-a.prev::before {
+.prev a::before {
   top: 8px;
   right: 7px;
   transform: rotate(-135deg);
 }
 
-a.next::before {
+.next a::before {
   top: 8px;
   left: 9px;
   transform: rotate(45deg);
 }
 
-a.current {
+.paginator__item--current a {
   border-radius: 50%;
   color: #000000;
   background-color: #ffffff;
 }
 
-a.disabled {
+.disabled a {
   opacity: 0.2;
 }
 
