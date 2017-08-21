@@ -35,13 +35,11 @@ body > input[type="radio"] {
 }
 
 .site-wrapper::before {
-  background-image: url("../img/Мороженко 1-1.png"),
-                    url("../img/Мороженко 2-1.png");
+  background-image: url("../img/slide2.png");
 }
 
 .site-wrapper::after {
-  background-image: url("../img/Мороженко 1-1.png"),
-                    url("../img/Мороженко 2-1.png");
+  background-image: url("../img/slide3.png");
 }
 
 .container {
@@ -411,20 +409,17 @@ a.catalog-new::after {
 
 #button1:checked ~ .site-wrapper {
   background-color: #849d8f;
-  background-image: url("../img/Мороженко 1.png"),
-                    url("../img/Мороженко 2.png");
+  background-image: url("../img/slide1.png");
 }
 
 #button2:checked ~ .site-wrapper {
   background-color: #8996a6;
-  background-image: url("../img/Мороженко 1-1.png"),
-                    url("../img/Мороженко 2-1.png");
+  background-image: url("../img/slide2.png");
 }
 
 #button3:checked ~ .site-wrapper {
   background-color: #9d8b84;
-  background-image: url("../img/Мороженко 1-2.png"),
-                    url("../img/Мороженко 2-2.png");
+  background-image: url("../img/slide3.png");
 }
 
 #button1:checked ~ .site-wrapper label[for="button1"],
@@ -443,7 +438,7 @@ a.catalog-new::after {
   width: 48.5%;
   height: 229px;
   border-radius: 18px;
-  background: #6a1b2a url("../img/Малиновый фон.jpg") top center no-repeat;
+  background: #6a1b2a url("../img/raspberry.jpg") top center no-repeat;
 }
 
 .banner__chocolate {
@@ -452,7 +447,7 @@ a.catalog-new::after {
   width: 48.5%;
   height: 229px;
   border-radius: 18px;
-  background: #4a3227 url("../img/Шоколадный фон.jpg") top center no-repeat;
+  background: #4a3227 url("../img/chocolate.jpg") top center no-repeat;
 }
 
 .banner__title {
@@ -494,12 +489,22 @@ a.catalog-new::after {
   margin-top: 38px;
 }
 
-.hit {
+.htts__list {
+  margin: 0;
+  padding: 0; 
+  list-style-type: none;
+}
+
+
+.product {
   float: left;
-  margin-right: 26px;
-  position: relative;
+  margin-right: 23px;
   width: 267px;
-  height: 267px;
+  position: relative;
+  }
+
+img.product__image {
+  text-align: top;
   border-radius: 50%;
 }
 
@@ -545,29 +550,13 @@ a.catalog-new::after {
   text-align: center;
 }
 
-.hit--orange {
-  background: #e7c382 url("../img/1.jpg") center center no-repeat;
-}
-
-.hit--chocolate {
-  background: #9f5640 url("../img/2.jpg") center center no-repeat;
-}
-
-.hit--strawberry {
-  background: #f799b6 url("../img/3.jpg") center center no-repeat;
-}
-
-.hit--creme-brulee {
-  background: #bb864d url("../img/4.jpg") center center no-repeat;
-}
-
 .about-us {
   margin-top: 95px;
   width: 1146px;
   height: 306px;
   color: #323232;
   border-radius: 15px;
-  background: #d9cdb5 url("../img/Вафля фон.jpg") center center no-repeat;
+  background: #d9cdb5 url("../img/wafer.jpg") left top repeat no-repeat;
 }
 
 .about-us__title {
@@ -591,6 +580,24 @@ a.catalog-new::after {
   padding-left: 76px;
   float: left;
   width: 50%;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+}
+
+li.about-us__manufacture {
+  background-image: url("../img/ice-cream.svg");  
+}
+
+li.about-us__contractors {
+  background-image: url("../img/eco.svg");  
+}
+
+li.about-us__ingredients {
+  background-image: url("../img/cow.svg");  
+}
+
+li.about-us__shipment {
+  background-image: url("../img/thermometer.svg");  
 }
 
 .content {
@@ -602,7 +609,7 @@ a.catalog-new::after {
   width: 560px;
   height: 220px;
   border-radius: 20px;
-  background: #edefee url("../img/Клубничный фон.jpg") center center no-repeat;
+  background: #edefee url("../img/strawberry.jpg") center center no-repeat;
 }
 
 .content__news h3 {
@@ -631,8 +638,11 @@ a.catalog-new::after {
   width: 560px;
   height: 220px;
   border-radius: 15px;
-  background: #f1f0ed url("../img/Почтовый фон.jpg") center center no-repeat;
-  z-index: -1;
+  background-color: #f8f7f4;
+  background-image: url("../img/postal.jpg");
+  background-position: 3px 0;
+  background-repeat: repeat;
+  z-index: 1;
 }
 
 .content__subscription::before {
@@ -645,6 +655,7 @@ a.catalog-new::after {
   right: 0;
   bottom: 0;
   left: 0;
+  border-radius: 10px;
   background-color: #f8f7f4;
   z-index: -1;
 }
@@ -677,9 +688,7 @@ a.catalog-new::after {
   margin: 0 auto;
   margin-top: 40px;
   padding-top: 42px;
-  width: 1200px;
-  height: 388px;
-  background: #ece6cd url("../img/Layer 3.jpg") center top no-repeat;
+  
 }
 
 .map::before {
@@ -690,7 +699,7 @@ a.catalog-new::after {
   top: 50%;
   margin-top: -75px;
   left: 266px;
-  background-image: url("../img/Пин.png");
+  background-image: url("../img/pin.svg");
 }
 
 .contacts {
@@ -717,7 +726,7 @@ a.catalog-new::after {
   float: left;
 }
 
-.main-footer__social a {
+a.social-button {
   display: block;
   margin-right: 12px;
   font-size: 0;
@@ -726,7 +735,24 @@ a.catalog-new::after {
   height: 32px;
   border-radius: 50%;
   border: 3px solid #c2cec7;
-  background: url("../img/twitter.svg") center no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+a.social-button--twitter {
+  background-image: url("../img/twitter.svg");
+}
+
+a.social-button--instagram {
+  background-image: url("../img/instagram.svg");
+}
+
+a.social-button--fb {
+  background-image: url("../img/fb.svg");
+}
+
+a.social-button--vk {
+  background-image: url("../img/vk.svg");
 }
 
 .main-footer__nav {
@@ -755,7 +781,7 @@ a.catalog-new::after {
 }
 
 a.contractors {
-  background: url("../img/Сердце.png") left bottom no-repeat;
+  background: url("../img/heart.svg") left bottom no-repeat;
 }
 
 a.manufacturing {
@@ -769,7 +795,7 @@ a.manufacturing {
   padding-top: 39px;
   color: #ffffff;
   font-size: 12px;
-  background: url("../img/Лого.png") left top no-repeat;
+  background: url("../img/logo-htmlacademy.svg") left top no-repeat;
 }
 
 .main-footer__copyright a {
@@ -1173,6 +1199,11 @@ p.lead {
 
 .main-catalog {
   margin-top: 132px;
+}
+
+1.catalog__list {
+  width: 293px;
+  height: 405px;
 }
 
 .main-catalog__cart {
