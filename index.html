@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Мороженое — «Глейси»</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,7 +18,7 @@
   <div class="site-wrapper">
     <div class="container">
       <header class="main-header">
-        <nav class="header-nav clearfix">
+        <nav class="header-nav">
           <a class="header-nav__logo"><img src="img/logo.svg" width="154" height="62" alt="логотип «магазин Глейси»"></a>
           <ul class="header-nav__site">
             <li class="catalog">
@@ -46,9 +47,9 @@
             <li class="cart"><a href="#">Пусто</a></li>
           </ul>
         </nav>
-        <div class="header-content clearfix">
+        <div class="header-content">
           <p class="header-content__time">С 10 до 20, ежедневно</p>
-          <span class="visuallyhidden">Телефон для заявок: </span><a class="header-content__phone" href="tel:+78124502525">8 812 450-25-25</a>
+          <span class="visuallyhidden">Телефон для заказов: </span><a class="header-content__phone" href="tel:+78124502525">8 812 450-25-25</a>
         </div>
       </header>
       <main class="main-content">
@@ -73,30 +74,31 @@
             <label for="button3"></label>
           </div>
         </section>
-        <section class="banners container clearfix">
+        <section class="banners container">
           <h2 class="visuallyhidden">Баннеры</h2>
           <div class="banner__raspberry">
             <h3>Малинка даром!</h3>
             <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <button>Хочу варенье!</button>
+            <button class="button button--banner">Хочу варенье!</button>
           </div>
           <div class="banner__chocolate">
             <h3>Шоколадки даром!</h3>
             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-            <button>Хочу шоколадки!</button>
+            <button class="button button--banner">Хочу шоколадки!</button>
           </div>
         </section>
-        <section class="hits container clearfix">
+        <section class="hits container">
           <h2 class="visuallyhidden">Хиты</h2>
-          <ul class="htts__list clearfix">
+          <ul class="hits__list">
             <li class="product">
               <h3 class="product__title"><a href="catalog-item1.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
               <p class="product__cost">
                 <a href="catalog-item1.html">
-                  <img class="product__image" src="img/1.jpg" width="267" height="267" alt="Сливочно-апельсиновое мороженое">
-                  310
-                  <span class="product__ruble">&#8381;</span>
-                  <span class="product__dimension">/кг</span>
+                	<img class="product__hit" src="img/hit.svg" width="61" height="61" alt="Хит">
+                  	<img class="product__image" src="img/1.jpg" width="267" height="267" alt="Сливочно-апельсиновое мороженое">
+                  	310
+                  	<span class="product__ruble">&#8381;</span>
+                  	<span class="product__dimension">/кг</span>
                 </a>
               </p>
               <a class="button button--quickview" href="#">Быстрый просмотр</a>
@@ -105,10 +107,11 @@
               <h3 class="product__title"><a href="catalog-item2.html">Сливочно-кофейное с кусочками шоколада</a></h3>
               <p class="product__cost">
                 <a href="catalog-item2.html">
-                  <img class="product__image" src="img/2.jpg" width="267" height="267" alt="Сливочно-кофейное мороженое">
+                	<img class="product__hit" src="img/hit.svg" width="61" height="61" alt="Хит">
+                  	<img class="product__image" src="img/2.jpg" width="267" height="267" alt="Сливочно-кофейное мороженое">
                   380
-                  <span class="product__ruble">&#8381;</span>
-                  <span class="product__dimension">/кг</span>
+                  	<span class="product__ruble">&#8381;</span>
+                  	<span class="product__dimension">/кг</span>
                 </a>
               </p>
               <a class="button button--quickview" href="#">Быстрый просмотр</a>
@@ -116,7 +119,9 @@
             <li class="product">
               <h3 class="product__title"><a href="catalog-item3.html">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
               <p class="product__cost">
+              
                 <a href="catalog-item3.html">
+                	<img class="product__hit" src="img/hit.svg" width="61" height="61" alt="Хит">
                     <img class="product__image" src="img/3.jpg" width="267" height="267" alt="Сливочно-клубничное мороженое">
                     355
                     <span class="product__ruble">&#8381;</span>
@@ -129,6 +134,7 @@
           		<h3 class="product__title"><a href="catalog-item5.html">Сливочное крем-брюле с карамельной подливкой</a></h3>
 		        <p class="product__cost">
 		        	<a href="catalog-item5.html">
+		        		<img class="product__hit" src="img/hit.svg" width="61" height="61" alt="Хит">
 		                <img class="product__image" src="img/4.jpg" width="267" height="267" alt="Сливочно-брусничное мороженое">
 		                     415
 		                <span class="product__ruble">&#8381;</span>
@@ -141,7 +147,7 @@
         </section>
         <section class="about-us container">
           <h2 class="about-us__title">Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
-          <ul class="about-us__advantages clearfix">
+          <ul class="about-us__advantages">
             <li class="about-us__manufacture">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
             </li>
             <li class="about-us__contractors">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
@@ -150,7 +156,7 @@
             <li class="about-us__shipment">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
           </ul>
         </section>
-        <div class="content container clearfix">
+        <div class="content container">
           <article class="content__news">
             <h2>Новое в нашем блоге</h2>
             <a class="news-title" href="#">10  способов сервировки фруктовых щербетов к столу</a>
@@ -160,7 +166,7 @@
             <p class="subscription-offer">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
             <form class="subscription-form" action="index.html" method="post">
               <input type="email" name="useremaill" value="" placeholder="Электронная почта">
-              <button class="button button--send" type="submit" name="button">Отправить</button>
+              <button class="button button--subscription" type="submit" name="button">Отправить</button>
             </form>
           </div>
         </div>
@@ -174,11 +180,11 @@
           <p>
             <b>8 812 450-25-25</b> (с 10 до 20 ежедневно)
           </p>
-          <a class="button" href="#feedback">Форма обратной связи</a>
+          <a class="button button--contacts" href="#feedback">Форма обратной связи</a>
         </div>
         </section>
       </main>
-      <footer class="main-footer container clearfix">
+      <footer class="main-footer container">
         <ul class="main-footer__social">
           <li>
             <a class="social-button social-button--twitter" href="#">Твиттер</a>
@@ -193,8 +199,7 @@
             <a class="social-button social-button--vk" href="#">ВКонтакте</a>
           </li>
         </ul>
-        <nav class="main-footer__nav">
-          <ul class="clearfix">
+          <ul class="main-footer__documentation">
             <li>
               <a class="contractors" href="#">Для поставщиков</a>
             </li>
@@ -208,7 +213,6 @@
               <a class="standards" href="#">Экологические стандарты</a>
             </li>
           </ul>
-        </nav>
         <p class="main-footer__copyright">Сделано в
           <a href="#">HTML Academy</a> &copy; 2017</p>
       </footer>
@@ -240,7 +244,9 @@
       <p>
         <input class="email-input" type="email" placeholder="Ваша почта для ответа?">
       </p>
-      <textarea class="message-textarea" name="message" cols="30" rows="10">Напишите что-нибудь...</textarea>
+      <p>
+      	<textarea class="message-textarea" name="message" cols="30" rows="10">Напишите что-нибудь...</textarea>
+      </p>
       <button class="button button--feedback" type="submit">Отправить</button>
     </form>
     <button class="modal-close"  type="button">Закрыть</button>

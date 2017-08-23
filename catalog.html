@@ -11,47 +11,39 @@
 </head>
 
 <body>
-  <header class="main-header container">
-    <nav class="header-nav clearfix">
-      <a class="header-nav__logo" href="index.html">
-              <img src="img/logo.svg" width="154" height="62" alt="логотип «магазин Глейси»"></a>
+  <header class="main-header">
+    <nav class="header-nav">
+      <a class="header-nav__logo" href="index.html"><img src="img/logo.svg" width="154" height="62" alt="логотип «магазин Глейси»"></a>
       <ul class="header-nav__site">
         <li class="catalog">
           <a class="catalog-link catalog-link--current" href="#">Каталог</a>
           <ul class="sub-nav__site">
-            <li>
-              <a href="#">Новинки</a>
-            </li>
-            <li class="sub-nav__site-link--current">
-              <a>Сливочное</a>
-            </li>
-            <li>
-              <a href="#">Щербеты</a>
-            </li>
-            <li>
-              <a href="#">Фруктовый лёд</a>
-            </li>
-            <li>
-              <a href="#">Мелорин</a>
-            </li>
+            <li><a class="catalog-new" href="#">Новинки</a></li>
+            <li><a href="catalog.html">Сливочное</a></li>
+            <li><a href="#">Щербеты</a></li>
+            <li><a href="#">Фруктовый лёд</a></li>
+            <li><a href="#">Мелорин</a></li>
           </ul>
         </li>
-        <li class="shipping">
-          <a class="shipping-link" href="#">Доставка и оплата</a>
-        </li>
-        <li class="about">
-          <a class="about-link" href="#">О компании</a>
-        </li>
+        <li class="shipping"><a class="shipping-link" href="#">Доставка и оплата</a></li>
+        <li class="about"><a class="about-link" href="#">О компании</a></li>
       </ul>
+      <div class="header-nav__search">
+        <form class="search-form" action="index.html" method="get">
+          <div class="input-outline">
+              <input class="search-input" type="search" placeholder="Что ищем?">
+          </div>
+          <button class="button--search" type="submit" name="button">Найти</button>
+        </form>
+      </div>  
       <ul class="header-nav__user">
-        <li class="search"><a class="search-link" href="#"><img src="img/search.png" alt="Поиск товаров"></a></li>
-        <li class="access"><a class="access-link" href="#">Вход</a></li>
+        <li class="login"><a href="#login">Вход</a></li>
         <li class="cart cart--user"><a class="cart-link" href="#cart">2 товара</a></li>
       </ul>
     </nav>
-    <div class="header-content clearfix">
+    <div class="header-content">
       <p class="header-content__time">С 10 до 20, ежедневно</p>
-      <a class="header-content__phone" href="tel:+78124502525">8 812 450-25-25</a>
+      <span class="visuallyhidden">Телефон для заказов: </span><a class="header-content__phone" href="tel:+78124502525">8 812 450-25-25</a>
     </div>
   </header>
   <main class="main-content container">
@@ -68,8 +60,8 @@
     </ul>
     <h1 class="main-content__title">Сливочное мороженое</h1>
     <section class="filters">
-      <h2 class="visually-hidden">Выбор по категориям</h2>
-      <form class="filter clearfix" action="index.html" method="get">
+      <h2 class="visuallyhidden">Выбор по категориям</h2>
+      <form class="filter clearfix" action="" method="get">
         <fieldset class="filter__sorting">
           <legend>Сортировка:</legend>
           <div class="sorting-select">
@@ -150,7 +142,7 @@
       </form>
     </section>
     <section class="catalog clearfix">
-      <h2 class="visually-hidden">Витрина</h2>
+      <h2 class="visuallyhidden">Витрина</h2>
       <ul class="catalog__list">
         <li class="product">
           <h3 class="product__title"><a href="catalog-item1.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
@@ -309,23 +301,22 @@
       <li class="next"><a href="#next">Вперёд</a></li>
     </ul>
   </main>
-  <footer class="main-footer container clearfix">
+  <footer class="main-footer container">
     <ul class="main-footer__social">
       <li>
-        <a class="social-button" href="#">Твиттер</a>
+        <a class="social-button social-button--twitter" href="#">Твиттер</a>
       </li>
       <li>
-        <a class="social-button" href="#">Инстаграм</a>
+        <a class="social-button social-button--instagram" href="#">Инстаграм</a>
       </li>
       <li>
-        <a class="social-button" href="#">Фейсбук</a>
+        <a class="social-button social-button--fb" href="#">Фейсбук</a>
       </li>
       <li>
-        <a class="social-button" href="#">ВКонтакте</a>
+        <a class="social-button social-button--vk" href="#">ВКонтакте</a>
       </li>
     </ul>
-    <nav class="main-footer__nav">
-      <ul class="clearfix">
+      <ul class="main-footer__documentation">
         <li>
           <a class="contractors" href="#">Для поставщиков</a>
         </li>
@@ -339,9 +330,8 @@
           <a class="standards" href="#">Экологические стандарты</a>
         </li>
       </ul>
-    </nav>
     <p class="main-footer__copyright">Сделано в
-      <a href="#">HTML Academy</a> © 2017</p>
+      <a href="#">HTML Academy</a> &copy; 2017</p>
   </footer>
   <section class="modal modal--cart" id="cart">
     <h2 class="visuallyhidden">Корзина покупателя</h2>
