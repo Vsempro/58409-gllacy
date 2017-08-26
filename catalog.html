@@ -11,8 +11,10 @@
 </head>
 
 <body>
-  <header class="main-header">
+  <div class="container">
+    <header class="main-header">
     <nav class="header-nav">
+    <div class="wrapp-left">
       <a class="header-nav__logo" href="index.html"><img src="img/logo.svg" width="154" height="62" alt="логотип «магазин Глейси»"></a>
       <ul class="header-nav__site">
         <li class="catalog">
@@ -26,20 +28,23 @@
           </ul>
         </li>
         <li class="shipping"><a class="shipping-link" href="#">Доставка и оплата</a></li>
-        <li class="about"><a class="about-link" href="#">О компании</a></li>
+        <li class="about"><a class="about-link" href="#">О Компании</a></li>
       </ul>
+      </div>
+      <div class="wrap-right">
       <div class="header-nav__search">
         <form class="search-form" action="index.html" method="get">
           <div class="input-outline">
               <input class="search-input" type="search" placeholder="Что ищем?">
           </div>
-          <button class="button--search" type="submit" name="button">Найти</button>
+          <button class="button--search" type="submit" name="button"><span class="visuallyhidden">Найти</span></button>
         </form>
       </div>  
       <ul class="header-nav__user">
         <li class="login"><a href="#login">Вход</a></li>
         <li class="cart cart--user"><a class="cart-link" href="#cart">2 товара</a></li>
       </ul>
+      </div>
     </nav>
     <div class="header-content">
       <p class="header-content__time">С 10 до 20, ежедневно</p>
@@ -61,7 +66,7 @@
     <h1 class="main-content__title">Сливочное мороженое</h1>
     <section class="filters">
       <h2 class="visuallyhidden">Выбор по категориям</h2>
-      <form class="filter clearfix" action="" method="get">
+      <form class="filter" action="" method="get">
         <fieldset class="filter__sorting">
           <legend>Сортировка:</legend>
           <div class="sorting-select">
@@ -141,152 +146,188 @@
         <button class="main-form__button" type="submit" name="button">Применить</button>
       </form>
     </section>
-    <section class="catalog clearfix">
+    <section class="catalog">
       <h2 class="visuallyhidden">Витрина</h2>
       <ul class="catalog__list">
         <li class="product">
+        <div class="product__wrapper"></div>
           <h3 class="product__title"><a href="catalog-item1.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+          <div class="image-wrapper">
+            <img class="product__image" src="img/1.jpg" width="267" height="267" alt="Сливочно-апельсиновое мороженое">
           <p class="product__cost">
             <a href="catalog-item1.html">
-              <img class="product__image" src="img/1.jpg" width="267" height="267" alt="Сливочно-апельсиновое мороженое">
               310
               <span class="product__ruble">&#8381;</span>
               <span class="product__dimension">/кг</span>
             </a>
           </p>
-          <a class="button button--quickview" href="#">Быстрый просмотр</a>
+          </div>
+            <a class="button button--quickview" href="#">Быстрый просмотр</a>
         </li>
         <li class="product">
+        <div class="product__wrapper"></div>
           <h3 class="product__title"><a href="catalog-item2.html">Сливочно-кофейное с кусочками шоколада</a></h3>
+          <div class="image-wrapper">
+          <img class="product__image" src="img/2.jpg" width="267" height="267" alt="Сливочно-кофейное мороженое">
           <p class="product__cost">
             <a href="catalog-item2.html">
-              <img class="product__image" src="img/2.jpg" width="267" height="267" alt="Сливочно-кофейное мороженое">
               380
               <span class="product__ruble">&#8381;</span>
               <span class="product__dimension">/кг</span>
             </a>
           </p>
+          </div>
           <a class="button button--quickview" href="#">Быстрый просмотр</a>
         </li>
         <li class="product">
-          <h3 class="product__title"><a href="catalog-item3.html">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+        <div class="product__wrapper"></div>
+          <h3 class="product__title"><a href="catalog-item3.html">Сливочно-клубничное с<br> присыпкой из белого шоколада</a></h3>
+          <div class="image-wrapper">
+          <img class="product__image" src="img/3.jpg" width="267" height="267" alt="Сливочно-клубничное мороженое">
           <p class="product__cost">
             <a href="catalog-item3.html">
-                <img class="product__image" src="img/3.jpg" width="267" height="267" alt="Сливочно-клубничное мороженое">
                 355
                 <span class="product__ruble">&#8381;</span>
                 <span class="product__dimension">/кг</span>
             </a>
           </p>
+          </div>
           <a class="button button--quickview" href="#">Быстрый просмотр</a>
         </li>
         <li class="product">
+        <div class="product__wrapper"></div>
           <h3 class="product__title"><a href="catalog-item4.html">Сливочное крем-брюле с карамельной подливкой</h3>
+          <div class="image-wrapper">
+          <img class="product__image" src="img/4.jpg" width="267" height="267" alt="Сливочно-брусничное мороженое">
           <p class="product__cost">
             <a href="catalog-item4.html">
-                  <img class="product__image" src="img/4.jpg" width="267" height="267" alt="Сливочно-брусничное мороженое">
                        415
                   <span class="product__ruble">&#8381;</span>
                   <span class="product__dimension">/кг</span>
               </a>
           </p>
+          </div>
           <a class="button button--quickview" href="#">Быстрый просмотр</a>
         </li>
         </li>
         <li class="product">
+        <div class="product__wrapper"></div>
           <h3 class="product__title"><a href="catalog-item5.html">Сливочное с брусничным<br> джемом</a></h3>
+          <div class="image-wrapper">
+          <img class="product__image" src="img/5.jpg" width="267" height="267" alt="Сливочно-брусничное мороженое">
           <p class="product__cost">
             <a href="catalog-item5.html">
-              <img class="product__image" src="img/5.jpg" width="267" height="267" alt="Сливочно-брусничное мороженое">
               325
               <span class="product__ruble">&#8381;</span>
               <span class="product__dimension">/кг</span>
             </a>
           </p>
+          </div>
           <a class="button button--quickview" href="#">Быстрый просмотр</a>
         </li>
         <li class="product">
+        <div class="product__wrapper"></div>
           <h3 class="product__title"><a href="catalog-item6.html">Сливочно-черничное с цельными ягодами черники</a></h3>
+          <div class="image-wrapper">
+          <img class="product__image" src="img/6.jpg" width="267" height="267" alt="Сливочно-черничное мороженое">
           <p class="product__cost">
             <a href="catalog-item6.html">
-              <img class="product__image" src="img/6.jpg" width="267" height="267" alt="Сливочно-черничное мороженое">
              410
               <span class="product__ruble">&#8381;</span>
               <span class="product__dimension">/кг</span>
             </a>
           </p>
+          </div>
           <a class="button button--quickview" href="#">Быстрый просмотр</a>
         </li>
         <li class="product">
+        <div class="product__wrapper"></div>
           <h3 class="product__title"><a href="catalog-item7.html">Сливочно-лимонное с карамельной присыпкой</a></h3>
+          <div class="image-wrapper">
+          <img class="product__image" src="img/7.jpg" width="267" height="267" alt="Сливочно-лимонное мороженое">
           <p class="product__cost">
             <a href="catalog-item7.html">
-              <img class="product__image" src="img/7.jpg" width="267" height="267" alt="Сливочно-лимонное мороженое">
              375
               <span class="product__ruble">&#8381;</span>
               <span class="product__dimension">/кг</span>
             </a>
           </p>
+          </div>
           <a class="button button--quickview" href="#">Быстрый просмотр</a>
         </li>
         <li class="product">
+        <div class="product__wrapper"></div>
           <h3 class="product__title"><a href="catalog-item8.html">Сливочное с шоколадной стружкой</a></h3>
+          <div class="image-wrapper">
+          <img class="product__image" src="img/8.jpg" width="267" height="267" alt="Сливочно-шоколадное мороженое">
           <p class="product__cost">
             <a href="catalog-item8.html">
-              <img class="product__image" src="img/8.jpg" width="267" height="267" alt="Сливочно-шоколадное мороженое">
              320
               <span class="product__ruble">&#8381;</span>
               <span class="product__dimension">/кг</span>
             </a>
           </p>
+          </div>
           <a class="button button--quickview" href="#">Быстрый просмотр</a>
         </li>
         <li class="product">
+        <div class="product__wrapper"></div>
           <h3 class="product__title"><a href="catalog-item9.html">Сливочно-ванильное с<br> кусочками шоколада</a></h3>
+          <div class="image-wrapper">
+          <img class="product__image" src="img/9.jpg" width="267" height="267" alt="Сливочно-ванильное мороженое">
           <p class="product__cost">
             <a href="catalog-item9.html">
-              <img class="product__image" src="img/9.jpg" width="267" height="267" alt="Сливочно-ванильное мороженое">
              440
               <span class="product__ruble">&#8381;</span>
               <span class="product__dimension">/кг</span>
             </a>
           </p>
+          </div>
           <a class="button button--quickview" href="#">Быстрый просмотр</a>
         </li>
         <li class="product">
+        <div class="product__wrapper"></div>
           <h3 class="product__title"><a href="catalog-item10.html">Сливочноe с ментоловым сиропом</a></h3>
+          <div class="image-wrapper">
+          <img class="product__image" src="img/10.jpg" width="267" height="267" alt="Сливочно-ментоловое мороженое">
           <p class="product__cost">
             <a href="catalog-item10.html">
-              <img class="product__image" src="img/10.jpg" width="267" height="267" alt="Сливочно-ментоловое мороженое">
              435
               <span class="product__ruble">&#8381;</span>
               <span class="product__dimension">/кг</span>
             </a>
           </p>
+          </div>
           <a class="button button--quickview" href="#">Быстрый просмотр</a>
         </li>
         <li class="product">
+        <div class="product__wrapper"></div>
           <h3 class="product__title"><a href="catalog-item11.html">Сливочное с кусочками черного шоколада</a></h3>
+          <div class="image-wrapper">
+          <img class="product__image" src="img/11.jpg" width="267" height="267" alt="Сливочное с шоколадом мороженое">
           <p class="product__cost">
             <a href="catalog-item11.html">
-              <img class="product__image" src="img/11.jpg" width="267" height="267" alt="Сливочное с шоколадом мороженое">
              355
               <span class="product__ruble">&#8381;</span>
               <span class="product__dimension">/кг</span>
             </a>
           </p>
+          </div>
           <a class="button button--quickview" href="#">Быстрый просмотр</a>
         </li>
         <li class="product">
+        <div class="product__wrapper"></div>
           <h3 class="product__title"><a href="catalog-item12.html">Сливочное с мятным сиропом</a></h3>
+          <div class="image-wrapper">
+          <img class="product__image" src="img/12.jpg" width="267" height="267" alt="Сливочно-мятное мороженое">
           <p class="product__cost">
             <a href="catalog-item12.html">
-              <img class="product__image" src="img/12.jpg" width="267" height="267" alt="Сливочно-мятное мороженое">
              420
               <span class="product__ruble">&#8381;</span>
               <span class="product__dimension">/кг</span>
             </a>
           </p>
+          </div>
           <a class="button button--quickview" href="#">Быстрый просмотр</a>
         </li>
       </ul>
@@ -333,6 +374,8 @@
     <p class="main-footer__copyright">Сделано в
       <a href="#">HTML Academy</a> &copy; 2017</p>
   </footer>
+  </div>
+  
   <section class="modal modal--cart" id="cart">
     <h2 class="visuallyhidden">Корзина покупателя</h2>
     <table>
