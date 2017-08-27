@@ -524,6 +524,7 @@ a.header-content__phone {
 	display: flex;
 	flex-direction: column;
 	position: relative;
+	margin-bottom: -13px;
 	width: 267px;
 	cursor: pointer;
 }
@@ -775,6 +776,10 @@ li.about-us__shipment {
 	width: 1200px;
 }
 
+.map img {
+	vertical-align: top;
+}
+
 .contacts {
 	position: absolute;
 	padding-top: 30px;
@@ -828,8 +833,10 @@ h4.contacts__phone {
 .main-footer {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 13px;
+	margin-top: -1px;
+	padding-top: 20px;
 	padding-bottom: 20px;
+	border-top: 1px solid #ffffff;
 }
 
 .main-footer__social,
@@ -1061,14 +1068,25 @@ p.lead {
   background-repeat: no-repeat;
 }
 
+.cart--user a {
+  padding-right: 20px;
+  width: 97px;
+  color: #323232;
+  text-align: right;
+  background: #f7f6f3 url("../img/basket-red.svg") 13px 7px no-repeat;
+}
+
 .breadcrumbs {
 	display: flex;
+	margin: 0;
+	padding: 0;
+	margin-top: -22px;
 	list-style: none;
 }
 
 .breadcrumbs a {
 	position: relative;
-	margin-right: 17px;
+	margin-right: 23px;
 	font-size: 14px;
 	line-height: 16px;
 	font-weight: 400;
@@ -1079,7 +1097,7 @@ p.lead {
 .breadcrumbs a::after {
   content: "";
   position: absolute;
-  top: 8px;
+  top: 6px;
   right: -10px;
   width: 5px;
   height: 5px;
@@ -1098,6 +1116,8 @@ p.lead {
 }
 
 .main-content h1 {
+	margin: 0;
+  	margin-top: 0px;
 	font-size: 35px;
 	line-height: 41px;
 	font-weight: 700;
@@ -1106,6 +1126,7 @@ p.lead {
 .filter {
 	display: flex;
 	flex-wrap: wrap;
+	margin-top: 24px;
 }
 
 fieldset.filter__sorting,
@@ -1117,28 +1138,61 @@ fieldset.filter__fillers {
 	border: none;
 }
 
-fieldset.filter__sorting {
-	padding-top: 10px;
-	width: 194px;
-}
-
 .sorting-select,
 .fat-fieldset,
 .fillers-fieldset {
-	height: 37px;
+	height: 27px;
 	border-radius: 19px;
 	background-color: #a9bab0;
 }
 
+fieldset.filter__sorting {
+	width: 194px;
+}
+
 fieldset.filter__cost {
+	margin-left: 15px;
 	width: 220px;
+}
+
+fieldset.filter__fat {
+	margin-left: 14px;
+	width: 415px;
+}
+
+fieldset.filter__fillers {
+	width: 703px;
 }
 
 .filter legend,
 .filter__cost label {
+	padding-left: 17px;
 	font-size: 14px;
 	line-height: 16px;
 	font-weight: 500;
+}
+
+.filter__cost .max-price {
+	padding-left: 0;
+}
+
+.filter__sorting legend {
+	padding-top: 3px;
+	padding-bottom: 4px;
+}
+
+.filter__fat legend {
+	padding-top: 3px;
+    padding-bottom: 4px;
+}
+
+.filter__fillers legend {
+	padding-top: 15px;
+	padding-bottom: 7px;
+}
+
+.cost-controls {
+	padding-bottom: 2px;
 }
 
 
@@ -1187,16 +1241,11 @@ fieldset.filter__cost {
 }
 
 .range-controls .toggle-min {
-  left: 20%;
+  left: 16%;
 }
 
 .range-controls .toggle-max {
   left: 60%;
-}
-
-fieldset.filter__fat {
-	padding-top: 10px;
-	width: 415px;
 }
 
 .fat-fieldset,
@@ -1204,10 +1253,27 @@ fieldset.filter__fat {
 	display: flex;
 	margin: 0;
 	padding: 0;
+	padding-top: 10px;
 	font-size: 16px;
 	line-height: 18px;
 	font-weight: 500;
 	list-style: none;
+}
+
+li.same0 {
+	padding-left: 47px;
+}
+
+li.less10 {
+	padding-left: 49px;
+}
+
+li.less30 {
+	padding-left: 50px;
+}
+
+li.more30 {
+	padding-left: 49px;
 }
 
 .fat-fieldset input {
@@ -1222,10 +1288,10 @@ fieldset.filter__fat {
 .fat-fieldset label::before {
   content: "";
   position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 5px;
-  right: 0px;
+  width: 19px;
+  height: 19px;
+  top: -19px;
+  right: 10px;
   border-radius: 50%;
   border: 1px solid #ffffff;
 }
@@ -1233,10 +1299,10 @@ fieldset.filter__fat {
 .fat-fieldset label::after {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 10px;
-  right: 6px;
+  width: 11px;
+  height: 11px;
+  top: -14px;
+  right: 15px;
   border-radius: 50%;
   background-color: #ffffff;
 }
@@ -1249,10 +1315,24 @@ fieldset.filter__fat {
   content: "";
 }
 
+li.chocolate {
+	padding-left: 49px;
+}
 
-fieldset.filter__fillers {
-	padding-top: 10px;
-	width: 703px;
+li.sugar {
+	padding-left: 51px;
+}
+
+li.fruit {
+	padding-left: 53px;
+}
+
+li.syrups {
+	padding-left: 55px;
+}
+
+li.jams {
+	padding-left: 53px;
 }
 
 .fillers-fieldset input {
@@ -1267,10 +1347,10 @@ fieldset.filter__fillers {
 .fillers-fieldset label::before {
   content: "";
   position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 5px;
-  right: 0px;
+  width: 19px;
+  height: 19px;
+  top: -20px;
+  right: 11px;
   border-radius: 3px;
   border: 1px solid #ffffff;
 }
@@ -1278,10 +1358,10 @@ fieldset.filter__fillers {
 .fillers-fieldset label::after {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 7px;
-  top: 10px;
-  right: 6px;
+  width: 9px;
+  height: 6px;
+  top: -15px;
+  right: 17px;
   border-left: 2px solid #ffffff;
   border-bottom: 2px solid #ffffff;
   transform: rotate(-45deg);
@@ -1296,13 +1376,16 @@ fieldset.filter__fillers {
 }
 
 .main-form__button {
-  cursor: pointer;
+	margin-top: 38px;
+	margin-left: 15px;
+  width: 144px;
+  height: 37px;
   color: inherit;
   font-size: 16px;
-  padding: 8px 28px;
   border-radius: 20px;
   border: 2px solid #ffffff;
   background-color: #9cb0a4;
+  cursor: pointer;
 }
 
 .main-form__button:hover,
@@ -1316,6 +1399,10 @@ fieldset.filter__fillers {
 	box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 1);
 }
 
+.catalog-goods {
+	margin-top: 37px;
+}
+
 .catalog__list {
 	display: flex;
 	justify-content: space-between;
@@ -1327,8 +1414,14 @@ fieldset.filter__fillers {
 
 .paginator {
 	display: flex;
-	justify-content: flex-end;
-  list-style: none;
+	justify-content: space-between;
+	margin: 0;
+  	padding: 0;
+	margin-top: 38px;
+	margin-left: auto;
+	padding-bottom: 31px;
+	width: 192px;
+  	list-style: none;
 }
 
 .paginator a {

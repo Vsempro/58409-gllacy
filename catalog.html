@@ -51,7 +51,7 @@
       <span class="visuallyhidden">Телефон для заказов: </span><a class="header-content__phone" href="tel:+78124502525">8 812 450-25-25</a>
     </div>
   </header>
-  <main class="main-content container">
+  <main class="main-content">
     <ul class="breadcrumbs">
       <li>
         <a href="index.html">Главная</a>
@@ -85,7 +85,7 @@
               <input type="text" value="100"> руб.
             </label>
             <label class="max-price">
-              –
+            – 
               <input type="text" value="500"> руб.
             </label>
           </div>
@@ -100,19 +100,19 @@
         <fieldset class="filter__fat">
           <legend>Жирность:</legend>
           <ul class="fat-fieldset">
-            <li>
-              <input id="0" type="radio" name="fat" value="0">0%
-              <label for="0"></label>
+            <li class="same0">
+              <input id="same0" type="radio" name="fat" value="0">0%
+              <label for="same0"></label>
             </li>
-            <li>
+            <li class="less10">
               <input id="less10" type="radio" name="fat" value="<=10" checked>до 10%
               <label for="less10"></label>
             </li>
-            <li>
+            <li class="less30">
               <input id="less30" type="radio" name="fat" value="<=30">до 30%
               <label for="less30"></label>
             </li>
-            <li>
+            <li class="more30">
               <input id="more30" type="radio" name="fat" value=">">выше 30%
               <label for="more30"></label>
             </li>
@@ -121,23 +121,23 @@
         <fieldset class="filter__fillers">
           <legend>Наполнители:</legend>
           <ul class="fillers-fieldset">
-            <li>
+            <li class="chocolate">
               <input id="chocolate" type="checkbox" name="chocolate" checked>шоколадные
               <label for="chocolate"></label>
             </li>
-            <li>
+            <li class="sugar">
               <input id="sugar" type="checkbox" name="sugar" checked>сахарные присыпки
               <label for="sugar"></label>
             </li>
-            <li>
+            <li class="fruit">
               <input id="fruit" type="checkbox" name="fruit">фрукты
               <label for="fruit"></label>
             </li>
-            <li>
+            <li class="syrups">
               <input id="syrups" type="checkbox" name="syrups">сиропы
               <label for="syrups"></label>
             </li>
-            <li>
+            <li class="jams">
               <input id="jams" type="checkbox" name="jams">джемы
               <label for="jams"></label>
             </li>
@@ -146,7 +146,7 @@
         <button class="main-form__button" type="submit" name="button">Применить</button>
       </form>
     </section>
-    <section class="catalog">
+    <section class="catalog-goods">
       <h2 class="visuallyhidden">Витрина</h2>
       <ul class="catalog__list">
         <li class="product">
@@ -342,40 +342,40 @@
       <li class="next"><a href="#next">Вперёд</a></li>
     </ul>
   </main>
-  <footer class="main-footer container">
-    <ul class="main-footer__social">
-      <li>
-        <a class="social-button social-button--twitter" href="#">Твиттер</a>
-      </li>
-      <li>
-        <a class="social-button social-button--instagram" href="#">Инстаграм</a>
-      </li>
-      <li>
-        <a class="social-button social-button--fb" href="#">Фейсбук</a>
-      </li>
-      <li>
-        <a class="social-button social-button--vk" href="#">ВКонтакте</a>
-      </li>
-    </ul>
-      <ul class="main-footer__documentation">
-        <li>
-          <a class="contractors" href="#">Для поставщиков</a>
-        </li>
-        <li>
-          <a class="documents" href="#">Наши документы</a>
-        </li>
-        <li>
-          <a class="manufacturing" href="#">О производстве</a>
-        </li>
-        <li>
-          <a class="standards" href="#">Экологические стандарты</a>
-        </li>
-      </ul>
-    <p class="main-footer__copyright">Сделано в
-      <a href="#">HTML Academy</a> &copy; 2017</p>
-  </footer>
-  </div>
-  
+  <footer class="main-footer">
+        <ul class="main-footer__social">
+          <li>
+            <a class="social-button social-button--twitter" href="#"><span class="visuallyhidden">Твиттер</span></a>
+          </li>
+          <li>
+            <a class="social-button social-button--instagram" href="#"><span class="visuallyhidden">Инстаграм</span></a>
+          </li>
+          <li>
+            <a class="social-button social-button--fb" href="#"><span class="visuallyhidden">Фейсбук</span></a>
+          </li>
+          <li>
+            <a class="social-button social-button--vk" href="#"><span class="visuallyhidden">ВКонтакте</span></a>
+          </li>
+        </ul>
+        <ul class="main-footer__documentation">
+          <li>
+            <a class="contractors" href="#">Для поставщиков</a>
+          </li>
+          <li>
+            <a class="documents" href="#">Наши документы</a>
+          </li>
+          <li>
+            <a class="manufacturing" href="#">О производстве</a>
+          </li>
+          <li>
+            <a class="standards" href="#">Экологические стандарты</a>
+          </li>
+        </ul>
+        <p class="main-footer__copyright">
+          <img src="img/logo-htmlacademy.svg" width="108" height="38" alt="логотип htmlacademy">Сделано в <a href="#">HTML Academy</a> &copy; 2017
+        </p>
+      </footer>
+  </div> 
   <section class="modal modal--cart" id="cart">
     <h2 class="visuallyhidden">Корзина покупателя</h2>
     <table>
