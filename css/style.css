@@ -178,6 +178,12 @@ a.about-link:active {
   color: #323232;
 }
 
+.sub-nav__site .catalog--current,
+.sub-nav__site .catalog--current:hover {
+	color: #ffffff;
+	background-color: #d07058;
+}
+
 .sub-nav__site a:hover,
 .sub-nav__site a:focus {
   background-color: #fbded7;
@@ -219,24 +225,56 @@ a.catalog-new::after {
 }
 
 .cart a {
+	position: relative;
 	padding-right: 33px;
   width: 84px;
   text-align: right;
-  background: #a1b4a9 url("../img/basket.svg") 17px 7px no-repeat;
+  background-color: #a1b4a9;
+ 
+}
+
+.cart svg {
+	position: absolute;
+	width: 21px;
+	height: 20px;
+	top: 6px;
+	left: 16px;
+
 }
 
 .login a {
+	position: relative;
   margin-right: 5px;
   padding-right: 17px;
   width: 75px;
   text-align: right;
-  background: #a1b4a9 url("../img/entrance.svg") 15px 7px no-repeat;
+  background-color: #a1b4a9;
+  background-position: 13px 7px;
+  background-repeat: no-repeat;
+}
+
+.login path {
+	fill: #ffffff;
+}
+
+.login svg {
+	position: absolute;
+	width: 21px;
+	height: 19px;
+	top: 6px;
+	left: 15px;
 }
 
 .header-nav__user a:hover,
 .header-nav__user a:focus {
   color: #323232;
   background-color: #f8f7f4;
+}
+
+.login-link:hover path,
+.emptycart:hover path,
+.emptycart:hover circle {
+	fill: #323232;
 }
 
 .header-nav__search {
@@ -272,6 +310,7 @@ a.catalog-new::after {
 }
 
 .button--search {
+	position: relative;
   display: block;
   margin-left: auto;
   margin-right: 5px;
@@ -281,11 +320,35 @@ a.catalog-new::after {
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  background: #a1b4a9 url(../img/loupe.svg) center no-repeat;
+  background-color: #a1b4a9;
+}
+
+.button--search svg {
+	position: absolute;
+	width: 17px;
+	height: 17px;
+	top: 8px;
+	left: 8px;
 }
 
 .button--search:hover {
-  background: #f8f7f4 url(../img/search_hover.png) center center no-repeat;
+  background: #f8f7f4;
+}
+
+.button--search:hover path {
+	fill: #323232;
+}
+
+.label-field {
+	position: absolute;
+	font-size: 11px;
+	line-height: 13px;
+  color: transparent;
+}
+
+.label-field--search {
+	top: 4px;
+	left: 29px;
 }
 
 .search-input {
@@ -299,10 +362,50 @@ a.catalog-new::after {
   right: 15px;
 }
 
+.search-input:hover {
+	padding-left: 12px;
+	border-width: 2px;
+}
+
 .search-input[placeholder="Что ищем?"] {
   font-size: 14px;
-  color: #999999;
+  font-weight: 700;
+  color: #000000;
 }
+
+
+.search-input:focus[placeholder="Что ищем?"] {
+	color: #000000;
+	outline: none;
+	border-color: #2e88e4;
+}
+
+.search-input:focus[placeholder="Что ищем?"] + .label-field {
+  color: #5b9ddf;
+}
+
+.search-input::-webkit-input-placeholder {
+	font-weight: 400;
+	color: #999999;
+}
+.search-input::-moz-placeholder {
+	font-weight: 400;
+	color: #999999;
+}
+.search-input:-moz-placeholder {
+	font-weight: 400;
+	color: #999999;
+}
+.search-input:-ms-input-placeholder {
+	font-weight: 400;
+	color: #999999;
+}
+
+.search-input:focus::-webkit-input-placeholder {color: transparent}
+.search-input:focus::-moz-placeholder          {color: transparent}
+.search-input:focus:-moz-placeholder           {color: transparent}
+.search-input:focus:-ms-input-placeholder      {color: transparent}
+
 
 .header-nav__user {
   margin: 0;
@@ -368,7 +471,7 @@ a.header-content__phone {
   color: #ffffff;
   vertical-align: middle;
   text-decoration: none;
-  background: linear-gradient( 90deg, rgba(231, 74, 53, 1) 0%, rgba(242, 104, 67, 1) 100%);
+  background: linear-gradient( 90deg, #e74a35 0%, #f26843 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
   border: none;
   cursor: pointer;
@@ -376,12 +479,13 @@ a.header-content__phone {
 
 .button:hover,
 .button:focus {
-  background: linear-gradient( 90deg, rgba(231, 74, 53, 0.8) 0%, rgba(242, 104, 67, 0.8) 100%);
-  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 1);
+	background-color: rgba(255, 255, 255, 0.2);
+  background: linear-gradient( 90deg, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0px 2px 2px 0px #ac1000;
 }
 
 .button:active {
-  background: linear-gradient( 90deg, rgba(242, 104, 67, 1) 0%, rgba(231, 74, 53, 1) 100%);
+  background: linear-gradient( 90deg, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1);
 }
 
@@ -415,6 +519,11 @@ a.header-content__phone {
   border: 2px solid #ffffff;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.slider__controls label:hover,
+.slider__controls label:focus {
+	background-color: #b2c1b7;
 }
 
 #button1:checked ~ .site-wrapper #slide1,
@@ -491,7 +600,7 @@ a.header-content__phone {
 .button--banner-raspberry,
 .button--banner-chocolate {
 	align-self: flex-end;
-	margin-top: 44px;
+	margin-top: 42px;
 	margin-right: 21px;
 	height: 46px;
   font-size: 18px;
@@ -533,7 +642,7 @@ a.header-content__phone {
 	position: absolute;
 	width: 293px;
 	height: 405px;
-	top: -7px;
+	top: -4px;
 	left: -13px;
 	border-radius: 5px;	
 }
@@ -614,10 +723,10 @@ a.header-content__phone {
   font-weight: 700;
   border-radius: 22px;
   visibility: hidden;
+  z-index: 1;
 }
 
 .about-us {
-	margin-top: -16px;
   width: 1146px;
   height: 306px;
   background-color: #d9cdb5;
@@ -648,10 +757,10 @@ a.header-content__phone {
 
 .about-us__advantages li {
   box-sizing: border-box;
-  padding-top: 24px;
+  padding-top: 20px;
   padding-left: 76px;
-  width: 50%;
-  background-position: 15px 9px;
+  width: 555px;
+  background-position: 20px 8px;
   background-repeat: no-repeat;
 }
 
@@ -708,16 +817,22 @@ li.about-us__shipment {
 	color: #323232;
 }
 
+.content__news a:hover,
+.content__news a:focus,
+.content__news a:active {
+	color: #e84d37;
+}
+
 .content__subscription {
   position: relative;
   width: 560px;
   height: 220px;
   border-radius: 15px;
   background-color: #f8f7f4;
-  background-image: url("../img/postal.jpg");
-  background-position: 3px 0;
+  background-image: url(../img/bg-post.svg);
+  background-position: 0;
   background-repeat: repeat;
-  z-index: 1;
+  z-index: 0;
 }
 
 .content__subscription::before {
@@ -737,16 +852,20 @@ li.about-us__shipment {
 
 .content__subscription p {
 	margin: 0;
-  	margin-top: 35px;
+  	margin-top: 32px;
   	margin-left: 27px;
   	width: 92%;
 	color: #5a5a5a;
 }
 
+.subscription-form {
+  position: relative;
+}
+
 .subscription-form input {
-	margin-top: 36px;
+	margin-top: 37px;
   margin-left: 24px;
-  width: 353px;
+  width: 370px;
   height: 45px;
   padding-left: 15px;
   border-radius: 5px;
@@ -754,16 +873,62 @@ li.about-us__shipment {
   box-sizing: border-box;
 }
 
+.subscription-form input:hover {
+	padding-left: 14px;
+	border-width: 2px;
+}
+
 .subscription-form input[placeholder="Электронная почта"] {
   font-size: 16px;
-  color: #999999;
+  font-weight: 700;
+  color: #000000;
+}
+
+.subscription-form input:focus[placeholder="Электронная почта"] {
+	color: #000000;
+	outline: none;
+	border-color: #2e88e4;
+}
+
+.subscription-form input:focus[placeholder="Электронная почта"] + .label-field {
+  color: #5b9ddf;
+}
+
+.subscription-form input::-webkit-input-placeholder {
+	font-weight: 400;
+	color: #999999;
+}
+
+.subscription-form input::-moz-placeholder {
+	font-weight: 400;
+	color: #999999;
+}
+
+.subscription-form input:-moz-placeholder {
+	font-weight: 400;
+	color: #999999;
+}
+
+.subscription-form input:-ms-input-placeholder {
+	font-weight: 400;
+	color: #999999;
+}
+
+.subscription-form input:focus::-webkit-input-placeholder {color: transparent}
+.subscription-form input:focus::-moz-placeholder          {color: transparent}
+.subscription-form input:focus:-moz-placeholder           {color: transparent}
+.subscription-form input:focus:-ms-input-placeholder      {color: transparent}
+
+.label-field--subscription {
+  top: 21px;
+  left: 40px;
 }
 
 .button--subscription {
 	display: inline-block;
 	vertical-align: top;
-	margin-top: 36px;
-	margin-left: 24px;
+	margin-top: 37px;
+	margin-left: 9px;
 	width: 129px;
 	height: 44px;
 	border-radius: 22px;
@@ -772,7 +937,7 @@ li.about-us__shipment {
 .map {
 	position: relative;
 	margin: 0 auto;
-	margin-top: 40px;
+	margin-top: 39px;
 	width: 1200px;
 }
 
@@ -788,7 +953,7 @@ li.about-us__shipment {
 	width: 277px;
 	color: #323232;
 	top: 62px;
-	right: 25px;
+	right: 27px;
 	border-radius: 10px;
 	background-color: #ffffff;
 }
@@ -834,7 +999,7 @@ h4.contacts__phone {
 	display: flex;
 	justify-content: space-between;
 	margin-top: -1px;
-	padding-top: 20px;
+	padding-top: 17px;
 	padding-bottom: 20px;
 	border-top: 1px solid #ffffff;
 }
@@ -854,7 +1019,6 @@ h4.contacts__phone {
 a.social-button {
   display: block;
   margin-right: 12px;
-  font-size: 0;
   text-decoration: none;
   width: 32px;
   height: 32px;
@@ -864,20 +1028,21 @@ a.social-button {
   background-repeat: no-repeat;
 }
 
-a.social-button--twitter {
-  background-image: url("../img/twitter.svg");
+a.social-button:active {
+	box-shadow: inset 0px 2px 1px 0px #888888;
 }
 
-a.social-button--instagram {
-  background-image: url("../img/instagram.svg");
+a.social-button path {
+  fill: rgba(255, 255, 255, 0.8);
 }
 
-a.social-button--fb {
-  background-image: url("../img/fb.svg");
+a.social-button:hover path,
+a.social-button:focus path {
+  fill: #ffffff;
 }
 
-a.social-button--vk {
-  background-image: url("../img/vk.svg");
+a.social-button:active path{
+	fill: #e9e9e9;
 }
 
 .main-footer__documentation {
@@ -898,6 +1063,12 @@ a.social-button--vk {
 	line-height: 18px;
 	font-weight: 400;
 	color: #ffffff;
+}
+
+.main-footer__documentation a:hover,
+.main-footer__documentation a:focus,
+.main-footer__documentation a:active {
+	color: #ffbc9e;
 }
 
 .main-footer__documentation .contractors {
@@ -926,21 +1097,29 @@ p.main-footer__copyright {
 	color: #ffffff;
 }
 
-1.modal {
+.main-footer__copyright a:hover,
+.main-footer__copyright a:focus,
+.main-footer__copyright a:active {
+	color: #ffbc9e;
+}
+
+.modal {
   position: fixed;
 }
 
-1.modal--login {
-  top: -12px;
-  right: 190px;
+.modal--login {
+  display: none;
+  top: 49px;
+  right: 183px;
 }
 
 
 .login-form {
-  margin-top: 5px;
+  position: relative;
+  padding-top: 20px;
   padding-left: 18px;
   width: 259px;
-  height: 214px;
+  height: 195px;
   border-radius: 5px;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
@@ -950,9 +1129,18 @@ p.main-footer__copyright {
   margin: 0;
 }
 
+.modal .label-field--loginemail {
+	top: 5px;
+  left: 32px;
+}
+
+.modal .label-field--loginpassword {
+  top: 69px;
+  left: 32px;
+}
+
 .login-input,
 .password-input {
-  margin-top: 18px;
   padding-left: 13px;
   width: 228px;
   height: 40px;
@@ -962,17 +1150,70 @@ p.main-footer__copyright {
 
 .password-input {
   margin-top: 20px;
-  margin-bottom: 23px;
+  margin-bottom: 12px;
+}
+
+.login-input:hover,
+.password-input:hover {
+	padding: 0;
+	padding-left: 12px;
+	border-width: 2px;
 }
 
 .login-input[placeholder="Электронная почта"],
 .password-input[placeholder="Пароль"] {
   font-size: 14px;
-  color: #999999;
+  font-weight: 700;
+  color: #000000;
 }
 
+.login-input:focus[placeholder="Электронная почта"],
+.password-input:focus[placeholder="Пароль"] {
+  color: #000000;
+	outline: none;
+	border-color: #2e88e4;
+}
+
+.login-input:focus[placeholder="Электронная почта"] + .label-field,
+.password-input:focus[placeholder="Пароль"] + .label-field {
+  color: #5b9ddf;
+}
+
+.login-input::-webkit-input-placeholder,
+.password-input::-webkit-input-placeholder {
+	font-weight: 400;
+	color: #999999;
+}
+.login-input::-moz-placeholder,
+.password-input::-moz-placeholder {
+	font-weight: 400;
+	color: #999999;
+}
+.login-input:-moz-placeholder,
+.password-input:-moz-placeholder {
+	font-weight: 400;
+	color: #999999;
+}
+.login-input:-ms-input-placeholder,
+.password-input:-ms-input-placeholder {
+	font-weight: 400;
+	color: #999999;
+}
+
+.login-input:focus::-webkit-input-placeholder,
+.password-input:focus::-webkit-input-placeholder  {color: transparent}
+.login-input:focus::-moz-placeholder,
+.password-input:focus::-moz-placeholder     {color: transparent}
+.login-input:focus:-moz-placeholder,
+.password-input:focus:-moz-placeholder      {color: transparent}
+.login-input:focus:-ms-input-placeholder,
+.password-input:focus:-ms-input-placeholder {color: transparent}
+
+
 .button--login {
-  display: inline-block;  
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 9px;  
   width: 100px;
   height: 44px;
   font-size: 18px;
@@ -983,6 +1224,8 @@ p.main-footer__copyright {
 
 p.form-footer {
   display: inline-block;
+  vertical-align: top;
+  margin-top: 9px;
   margin-left: 19px;
   width: 125px;
   font-size: 13px;
@@ -995,13 +1238,14 @@ p.form-footer {
 }
 
 .modal--feedback {
+  display: none;
   padding-top: 19px;
   padding-left: 25px;
   padding-right: 25px;
   width: 428px;
   height: 424px;
   top: 328px;
-  left: 388px;
+  left: 394px;
   border-radius: 10px;
   color: #323232;
   background-color: #f8f7f4;
@@ -1011,9 +1255,28 @@ p.lead {
   font-size: 24px;  
 }
 
+.form-feedback {
+  position: relative;
+  padding-top: 22px;
+}
+
+.modal--feedback .label-field--feedbackname {
+	top: 5px;
+  left: 16px;
+}
+
+.modal--feedback .label-field--feedbackemail {
+  top: 70px;
+  left: 16px;
+}
+
+.modal--feedback .label-field--feedbackmassage {
+  top: 133px;
+  left: 16px;
+}
+
 .username-input,
 .email-input {
-  margin-top: 24px;
   padding-left: 15px;
   width: 252px;
   height: 40px;
@@ -1026,12 +1289,66 @@ p.lead {
   margin-bottom: 19px;
 }
 
+.username-input:hover,
+.email-input:hover {
+	padding: 0;
+	padding-left: 14px;
+	border-width: 2px;
+}
 
 .username-input[placeholder="Как вас зовут?"],
 .email-input[placeholder="Ваша почта для ответа?"] {
   font-size: 16px;
-  color: #999999;
+  font-weight: 700;
+  color: #000000;
 }
+
+.username-input:focus[placeholder="Как вас зовут?"],
+.email-input:focus[placeholder="Ваша почта для ответа?"] {
+  color: #000000;
+	outline: none;
+	border-color: #2e88e4;
+}
+
+.username-input:focus[placeholder="Как вас зовут?"] + .label-field,
+.email-input:focus[placeholder="Ваша почта для ответа?"] + .label-field {
+  color: #5b9ddf;
+}
+
+
+.username-input::-webkit-input-placeholder,
+.email-input::-webkit-input-placeholder {
+	font-weight: 400;
+	color: #999999;
+}
+
+.username-input::-moz-placeholder,
+.email-input::-moz-placeholder {
+	font-weight: 400;
+	color: #999999;
+}
+
+.username-input:-moz-placeholder,
+.email-input:-moz-placeholder {
+	font-weight: 400;
+	color: #999999;
+}
+
+.username-input:-ms-input-placeholder,
+.email-input:-ms-input-placeholder {
+	font-weight: 400;
+	color: #999999;
+}
+
+.username-input:focus::-webkit-input-placeholder,
+.email-input:focus::-webkit-input-placeholder {color: transparent}
+.username-input:focus::-moz-placeholder,
+.email-input:focus::-moz-placeholder          {color: transparent}
+.username-input:focus:-moz-placeholder,
+.email-input:focus:-moz-placeholder           {color: transparent}
+.username-input:focus:-ms-input-placeholder,
+.email-input:focus:-ms-input-placeholder      {color: transparent}
+
 
 .message-textarea {
   padding-top: 12px;
@@ -1042,6 +1359,54 @@ p.lead {
   border-radius: 5px;
   border: 1px solid #b2b2b2;
 }
+
+.message-textarea:hover {
+	padding-top: 11px;
+	padding-left: 11px;
+	border-width: 2px;
+}
+
+.message-textarea[placeholder="Напишите что-нибудь..."] {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.message-textarea:focus[placeholder="Напишите что-нибудь..."] {
+	color: #000000;
+	outline: none;
+	border-color: #2e88e4;
+}
+
+.message-textarea:focus[placeholder="Напишите что-нибудь..."] + .label-field {
+  color: #5b9ddf;
+}
+
+.message-textarea::-webkit-input-placeholder {
+	font-weight: 400;
+	color: #999999;
+}
+
+.message-textarea::-moz-placeholder {
+	font-weight: 400;
+	color: #999999;
+}
+
+.message-textarea:-moz-placeholder {
+	font-weight: 400;
+	color: #999999;
+}
+
+.message-textarea:-ms-input-placeholder {
+	font-weight: 400;
+	color: #999999;
+}
+
+.message-textarea:focus::-webkit-input-placeholder {color: transparent}
+.message-textarea:focus::-moz-placeholder          {color: transparent}
+.message-textarea:focus:-moz-placeholder           {color: transparent}
+.message-textarea:focus:-ms-input-placeholder      {color: transparent}
+
 
 .button--feedback {
   display: block;
@@ -1057,8 +1422,8 @@ p.lead {
 	display: block;
     width: 18px;
   height: 17px;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
   font-size: 0;
   border: none;
   cursor: pointer;
@@ -1068,12 +1433,30 @@ p.lead {
   background-repeat: no-repeat;
 }
 
+.modal--overlay {
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .cart--user a {
+	padding-right: 20px;
+	width: 97px;
+	background-image: url(../img/basket.svg);
+	background-position: 13px 7px;
+  	background-repeat: no-repeat;
+}
+
+.cart--user a:hover {
   padding-right: 20px;
   width: 97px;
   color: #323232;
   text-align: right;
-  background: #f7f6f3 url("../img/basket-red.svg") 13px 7px no-repeat;
+  background-color: #f7f6f3;
+  background-image: url(../img/basket-red.svg);
 }
 
 .breadcrumbs {
@@ -1093,11 +1476,17 @@ p.lead {
 	color: #ffffff;
 }
 
+.breadcrumbs a:hover,
+.breadcrumbs a:focus,
+.breadcrumbs a:active {
+	color: #ffbc9e;
+}
+
 .breadcrumbs a::before,
 .breadcrumbs a::after {
   content: "";
   position: absolute;
-  top: 6px;
+  top: 8px;
   right: -10px;
   width: 5px;
   height: 5px;
@@ -1110,9 +1499,16 @@ p.lead {
   right: -14px;
 }
 
-.breadcrumbs li:last-child a::before,
-.breadcrumbs li:last-child a::after {
+.breadcrumbs-link--current a::before,
+.breadcrumbs-link--current a::after {
   content: none;
+}
+
+a.breadcrumbs--curent,
+a.breadcrumbs--curent:hover,
+a.breadcrumbs--curent:focus,
+a.breadcrumbs--curent:active {
+	color: #ffffff;
 }
 
 .main-content h1 {
@@ -1144,6 +1540,32 @@ fieldset.filter__fillers {
 	height: 27px;
 	border-radius: 19px;
 	background-color: #a9bab0;
+}
+
+.sorting-select {
+	padding-top: 8px;
+	padding-left: 13px;
+	padding-bottom: 3px;
+}
+
+.sorting-select:hover,
+.sorting-select:focus {
+	background-color: #ffffff;
+}
+
+.sorting-select select {
+	width: 172px;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+	color: #ffffff;
+	border: none;
+	background-color: transparent;
+}
+
+.sorting-select:hover select,
+.sorting-select:focus select {
+	color: #323232;
 }
 
 fieldset.filter__sorting {
@@ -1296,6 +1718,12 @@ li.more30 {
   border: 1px solid #ffffff;
 }
 
+.fat-fieldset label:hover::before {
+	top: -20px;
+  right: 9px;
+  border: 2px solid #ffffff;
+}
+
 .fat-fieldset label::after {
   content: "";
   position: absolute;
@@ -1313,6 +1741,11 @@ li.more30 {
 
 .fat-fieldset input:checked + label::after {
   content: "";
+}
+
+.fat-fieldset input:disabled + label::before,
+.fat-fieldset input:disabled + label::after {
+	opacity: 0.4;
 }
 
 li.chocolate {
@@ -1347,8 +1780,8 @@ li.jams {
 .fillers-fieldset label::before {
   content: "";
   position: absolute;
-  width: 19px;
-  height: 19px;
+  width: 20px;
+  height: 20px;
   top: -20px;
   right: 11px;
   border-radius: 3px;
@@ -1361,7 +1794,7 @@ li.jams {
   width: 9px;
   height: 6px;
   top: -15px;
-  right: 17px;
+  right: 16px;
   border-left: 2px solid #ffffff;
   border-bottom: 2px solid #ffffff;
   transform: rotate(-45deg);
@@ -1373,6 +1806,32 @@ li.jams {
 
 .fillers-fieldset input:checked + label::after {
   content: "";
+}
+
+.fillers-fieldset label:hover::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 23px;
+  top: -20px;
+  right: 8px;
+  background-repeat: no-repeat;
+}
+
+.fillers-fieldset input + label:hover::before {
+	border: none;
+	background-position: left center;
+  	background-image: url(../img/checkbox-off.svg);
+}
+
+.fillers-fieldset input:checked + label:hover::before {
+	background-position: left center;
+  background-image: url(../img/checkbox-on.svg);
+}
+
+.fillers-fieldset input:disabled + label::before,
+.fillers-fieldset input:disabled + label::after {
+	opacity: 0.4;
 }
 
 .main-form__button {
@@ -1397,6 +1856,7 @@ li.jams {
 .main-form__button:active {
 	border: none;
 	box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 1);
+	background-color: #ededed;
 }
 
 .catalog-goods {
@@ -1434,6 +1894,12 @@ li.jams {
   text-decoration: none;
   line-height: 25px;
   color: #ffffff;
+  border-radius: 50%;
+}
+
+.paginator__item a:hover,
+.paginator__item a:focus {
+	background-color: rgba(255, 255, 255, 0.3);
 }
 
 .prev,
@@ -1463,8 +1929,10 @@ li.jams {
   transform: rotate(45deg);
 }
 
-.paginator__item--current a {
-  border-radius: 50%;
+.paginator__item--current a,
+.paginator__item--current a:hover,
+.paginator__item--current a:focus,
+.paginator__item a:active {
   color: #000000;
   background-color: #ffffff;
 }
@@ -1474,13 +1942,14 @@ li.jams {
 }
 
 .modal--cart {
+  display: none;
   padding-top: 7px;
-  padding-right: 15px;
+  padding-right: 13px;
   padding-left: 15px;
   width: 510px;
   height: 234px;
-  top: 49px;
-  right: 63px;
+  top: 50px;
+  right: 59px;
   font-size: 13px;
   line-height: 16px;
   color: #323232;
@@ -1507,11 +1976,17 @@ td.cart__operator,
 td.cart__cost,
 td.cart__ruble,
 td.cart__result {
-	padding-top: 20px;
+	padding-top: 21px;
 }
 
 td.cart__close {
+  padding-top: 23px;
   width: 10px;
+}
+
+td.cart__cost--color,
+td.cart__ruble--color {
+  color: #999999;
 }
 
 .modal-delete {
@@ -1527,10 +2002,6 @@ td.cart__close {
   background-repeat: no-repeat;
 }
 
-td.cart__close--next {
-  padding-bottom: 32px;
-}
-
 td.cart__image {
   padding-top: 12px;
   padding-left: 12px;
@@ -1542,7 +2013,7 @@ td.cart__image {
 }
 
 td.cart__image--next {
-  padding-top: 17px;
+  padding-top: 19px;
 }
 
 td.cart__article {
@@ -1552,11 +2023,11 @@ td.cart__article {
 }
 
 td.cart__value {
-  padding-left: 10px;
+  padding-left: 13px;
 }
 
 td.cart__result {
-  padding-left: 23px;
+  padding-left: 28px;
 }
 
 td.cart__ruble--total {
@@ -1572,7 +2043,12 @@ td.cart__cost--next,
 td.cart__ruble--next,
 td.cart__result--next,
 td.cart__ruble--next {
-  padding-top: 26px;
+  padding-top: 28px;
+}
+
+td.cart__close--next {
+  padding-top: 31px;
+  padding-bottom: 34px;
 }
 
 p.cart__total {
