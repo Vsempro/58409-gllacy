@@ -33,37 +33,88 @@
         </div>
         <div class="wrap-right">
           <div class="header-nav__search">
-            <form class="search-form" action="index.html" method="get">
-              <div class="input-outline">
-                <p class="label-field label-field--search">
-                  <label for="id-searchinput">Что ищем?</label>
-                </p>
-                <input class="search-input" id="id-searchinput" type="search" placeholder="Что ищем?">
-              </div>
-              <button class="button--search" type="submit" name="button">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
-                  <path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z" />
-                </svg>
-                <span class="visuallyhidden">Найти</span>
-              </button>
-            </form>
-          </div>
-          <ul class="header-nav__user">
-            <li class="login">
-              <a class="login-link" href="#login">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
-                  <g fill="#000">
-                    <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z" />
-                    <path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z" />
-                  </g>
-                </svg>
-                Вход
-              </a>
-            </li>
-            <li class="cart cart--user">
-              <a class="cart-link" href="cart.html">2 товара</a>
-            </li>
-          </ul>
+              <form class="search-form" action="index.html" method="get">
+                <div class="input-outline">
+                  <input class="search-input" id="id-searchinput" type="search" placeholder="Что ищем?">
+                  <label class="label-field label-field--search" for="id-searchinput">Что ищем?</label>
+                </div>
+                <button class="button--search" type="submit" name="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
+                    <path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z" />
+                  </svg>
+                  <span class="visuallyhidden">Найти</span>
+                </button>
+              </form>
+            </div>
+            <ul class="header-nav__user">
+              <li class="login">
+                <div class="modal-login" id="login">
+                  <a class="login-link">
+                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
+                        <g fill="#000">
+                          <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z" />
+                          <path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z" />
+                        </g>
+                      </svg>
+                      Вход
+                </a>
+                  <form class="login-form" action="index.html" method="post">
+                    <p>
+                      <input class="login-input" id="id-loginemail" type="email" placeholder="Электронная почта">
+                      <label class="label-field label-field--loginemail" for="id-loginemail">Электронная почта</label>
+                    </p>
+                    <p>
+                      <input class="password-input" id="id-password" type="password" placeholder="Пароль">
+                      <label class="label-field label-field--loginpassword" for="id-password">Пароль</label>
+                    </p>
+                    <button class="button button--login" type="submit">Войти</button>
+                    <p class="form-footer">
+                      <a href="#">Забыли пароль?</a>
+                      <a href="#">Новая регистрация</a>
+                    </p>
+                  </form>
+                </div>
+              </li>
+              <li class="cart">
+                <div class="emptycart emptycart--none">
+                  <a class="emptycart-link emptycart-link--goods">2 товара</a>
+                  <div class="modal modal-cart" id="cart"> 
+                    <table>
+                      <tr>
+                        <td class="cart__close cart__close--top">
+                          <button class="modal-delete" type="button">Удалить</button>
+                        </td>
+                        <td class="cart__image"><img src="img/cart-item1.jpg" width="33" height="33" alt="мороженое"></td>
+                        <td class="cart__article">Пломбир с апельсиновым джемом</td>
+                        <td class="cart__value">1,5</td>
+                        <td class="cart__dimension">кг</td>
+                        <td class="cart__operator">х</td>
+                        <td class="cart__cost cart__cost--color">200</td>
+                        <td class="cart__ruble cart__ruble--color">руб.</td>
+                        <td class="cart__result">300</td>
+                        <td class="cart__ruble cart__ruble--total">руб.</td>
+                      </tr>
+                      <tr>
+                        <td class="cart__close cart__close--next">
+                          <button class="modal-delete" type="button">Удалить</button>
+                        </td>
+                        <td class="cart__image cart__image--next"><img src="img/cart-item2.jpg" width="33" height="33" alt="мороженое"></td>
+                        <td class="cart__article cart__article--next">Клубничный пломбир с присыпкой из белого шоколада</td>
+                        <td class="cart__value cart__value--next">1,5</td>
+                        <td class="cart__dimension cart__dimension--next">кг</td>
+                        <td class="cart__operator cart__operator--next">х</td>
+                        <td class="cart__cost cart__cost--next cart__cost--color">300</td>
+                        <td class="cart__ruble cart__ruble--next cart__ruble--color">руб.</td>
+                        <td class="cart__result cart__result--next">450</td>
+                        <td class="cart__ruble cart__ruble--next">руб.</td>
+                      </tr>
+                    </table>
+                    <p class="cart__total">Итого: <span>750</span> руб.</p>
+                    <a class="button button--order" href="#">Оформить заказ</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
         </div>
       </nav>
       <div class="header-content">
@@ -409,41 +460,6 @@
       </p>
     </footer>
   </div>
-  <section class="modal modal--cart" id="cart">
-    <h2 class="visuallyhidden">Корзина покупателя</h2>
-    <table>
-      <tr>
-        <td class="cart__close cart__close--top">
-          <button class="modal-delete" type="button">Удалить</button>
-        </td>
-        <td class="cart__image"><img src="img/cart-item1.jpg" width="33" height="33" alt="мороженое"></td>
-        <td class="cart__article">Пломбир с апельсиновым джемом</td>
-        <td class="cart__value">1,5</td>
-        <td class="cart__dimension">кг</td>
-        <td class="cart__operator">х</td>
-        <td class="cart__cost cart__cost--color">200</td>
-        <td class="cart__ruble cart__ruble--color">руб.</td>
-        <td class="cart__result">300</td>
-        <td class="cart__ruble cart__ruble--total">руб.</td>
-      </tr>
-      <tr>
-        <td class="cart__close cart__close--next">
-          <button class="modal-delete" type="button">Удалить</button>
-        </td>
-        <td class="cart__image cart__image--next"><img src="img/cart-item2.jpg" width="33" height="33" alt="мороженое"></td>
-        <td class="cart__article cart__article--next">Клубничный пломбир с присыпкой из белого шоколада</td>
-        <td class="cart__value cart__value--next">1,5</td>
-        <td class="cart__dimension cart__dimension--next">кг</td>
-        <td class="cart__operator cart__operator--next">х</td>
-        <td class="cart__cost cart__cost--next cart__cost--color">300</td>
-        <td class="cart__ruble cart__ruble--next cart__ruble--color">руб.</td>
-        <td class="cart__result cart__result--next">450</td>
-        <td class="cart__ruble cart__ruble--next">руб.</td>
-      </tr>
-    </table>
-    <p class="cart__total">Итого: <span>750</span> руб.</p>
-    <a class="button button--order" href="#">Оформить заказ</a>
-  </section>
 </body>
 
 </html>
