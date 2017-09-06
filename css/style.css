@@ -141,7 +141,7 @@ a.catalog__link:focus,
 a.shipping__link:hover,
 a.shipping__link:focus,
 a.about__link:hover,
-a.abou__link:focus {
+a.about__link:focus {
   text-decoration: none;
   color: #323232;
   background-color: #f8f7f4;
@@ -310,7 +310,8 @@ a.catalog-last:focus {
   left: 8px;
 }
 
-.search-form__button:hover {
+.search-form__button:hover,
+.search-form__button:focus {
   background: #f8f7f4;
 }
 
@@ -482,7 +483,7 @@ a.catalog-last:focus {
 }
 
 .login__modal:hover,
-.modal-login:focus {
+.login__modal:focus {
   overflow: visible;
 }
 
@@ -1765,7 +1766,8 @@ p.lead {
   overflow: hidden;
 }
 
-.cart__empty--none:hover {
+.cart__empty--none:hover,
+.cart__empty--none:focus {
   overflow: visible;
 }
 
@@ -2033,6 +2035,7 @@ fieldset.filter__fillers {
   background-image: url(../img/triangle.svg);
   background-position: 171px 17px;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .sorting-select::-ms-expand {

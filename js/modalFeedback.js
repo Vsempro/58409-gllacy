@@ -1,32 +1,38 @@
 var linkFeedback = document.querySelector(".button--contacts"),
-  modalOverlay = document.querySelector(".modal-overlay"),
-  modalFeedback = document.querySelector(".modal-feedback"),
-  closeFeedback = modalFeedback.querySelector(".modal-close"),
-  formFeedback = modalFeedback.querySelector("form"),
-  loginFeedback = modalFeedback.querySelector("[name=login]"),
-  emailFeedback = modalFeedback.querySelector("[name=email]"),
-  messageFeedback = modalFeedback.querySelector("[name=message]"),
-  storageLogin = localStorage.getItem('loginFeedback');
+  	modalOverlay = document.querySelector(".modal-overlay"),
+  	modalFeedback = document.querySelector(".modal-feedback"),
+  	closeFeedback = modalFeedback.querySelector(".modal-close"),
+  	formFeedback = modalFeedback.querySelector("form"),
+  	loginFeedback = modalFeedback.querySelector("[name=login]"),
+  	emailFeedback = modalFeedback.querySelector("[name=email]"),
+  	messageFeedback = modalFeedback.querySelector("[name=message]"),
+  	storageLogin = localStorage.getItem('loginFeedback')
+  	storageEmail = localStorage.getItem('emailFeedback');
 
 linkFeedback.addEventListener('click', function(event) {
   event.preventDefault();
-  modalOverlay.classList.add("modal-overlay--show");
+  modalOverlay.classList.add('modal-overlay--show');
   modalFeedback.classList.add('modal-feedback--show');
-
-  if (storageLogin) {
+  if (storageLogin && storageEmail) {
+  	loginFeedback.value = storageLogin;
+  	emailFeedback.value = storageEmail;
+  	messageFeedback.focus();
+  } else if	(storageLogin) {
     loginFeedback.value = storageLogin;
     emailFeedback.focus();
+  } else if	(storageEmail) {
+    emailFeedback.value = storageEmail;
+    loginFeedback.focus();
   } else {
     loginFeedback.focus();
   }
-
 });
 
 closeFeedback.addEventListener('click', function(event) {
   event.preventDefault();
-  modalOverlay.classList.remove("modal-overlay--show");
   modalFeedback.classList.remove('modal-feedback--show');
-  modalFeedback.remove('modal-error');
+  modalOverlay.classList.remove('modal-overlay--show');
+  modalFeedback.classList.remove('modal-error');
 });
 
 formFeedback.addEventListener('submit', function(event) {
@@ -37,15 +43,16 @@ formFeedback.addEventListener('submit', function(event) {
     modalFeedback.classList.add('modal-error');
   } else {
     localStorage.setItem('loginFeedback', loginFeedback.value);
+    localStorage.setItem('emailFeedback', emailFeedback.value);
   }
 });
 
 window.addEventListener('keydown', function(event) {
   if (event.keyCode === 27) {
     if (modalFeedback.classList.contains('modal-feedback--show')) {
-      modalOverlay.classList.remove("modal-overlay--show");
       modalFeedback.classList.remove('modal-feedback--show');
-      modalFeedback.remove('modal-error');
+      modalOverlay.classList.remove('modal-overlay--show');
+      modalFeedback.classList.remove('modal-error');
     }
   }
 })

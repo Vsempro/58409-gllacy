@@ -8,7 +8,7 @@
   <title>Мороженое — «Глейси»</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
           <div class="wrapp-left">
             <a class="header-nav__logo"><img src="img/logo.svg" width="154" height="62" alt="логотип «магазин Глейси»"></a>
             <ul class="header-nav__site">
-              <li class="catalog">
+              <li class="catalog" tabindex="0">
                 <a class="catalog__link" href="#">Каталог</a>
                 <ul class="catalog__sub-nav">
                   <li><a class="catalog-first" href="#">Новинки</a></li>
@@ -37,7 +37,7 @@
             </ul>
           </div>
           <div class="wrap-right">
-            <div class="header-nav__search">
+            <div class="header-nav__search" tabindex="0">
               <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
                 <div class="search-form__input">
                   <input class="search-input" name="search" id="id-searchinput" type="search" placeholder="Что ищем?">
@@ -53,7 +53,7 @@
             </div>
             <ul class="header-nav__user">
               <li class="login">
-                <div class="login__modal" id="login">
+                <div class="login__modal" id="login" tabindex="0">
                   <a class="login-link">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
                       <g fill="#000">
@@ -142,7 +142,7 @@
         <section class="hits">
           <h2 class="visually-hidden">Хиты</h2>
           <ul class="hits__list">
-            <li class="product">
+            <li class="product" tabindex="0">
             <div class="product__wrapper"></div>
             <h3 class="product__title"><a href="catalog-item1.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
             <div class="image-wrapper">
@@ -157,7 +157,7 @@
             </div>
             <a class="button button--quickview" href="#">Быстрый просмотр</a>
           </li>
-          <li class="product">
+          <li class="product" tabindex="0">
             <div class="product__wrapper"></div>
             <h3 class="product__title"><a href="catalog-item2.html">Сливочно-кофейное с кусочками шоколада</a></h3>
             <div class="image-wrapper">
@@ -172,7 +172,7 @@
             </div>
             <a class="button button--quickview" href="#">Быстрый просмотр</a>
           </li>
-          <li class="product">
+          <li class="product" tabindex="0">
             <div class="product__wrapper"></div>
             <h3 class="product__title"><a href="catalog-item3.html">Сливочно-клубничное с<br> присыпкой из белого шоколада</a></h3>
             <div class="image-wrapper">
@@ -187,7 +187,7 @@
             </div>
             <a class="button button--quickview" href="#">Быстрый просмотр</a>
           </li>
-          <li class="product">
+          <li class="product" tabindex="0">
             <div class="product__wrapper"></div>
             <h3 class="product__title"><a href="catalog-item4.html">Сливочное крем-брюле с карамельной подливкой</a></h3>
             <div class="image-wrapper">
@@ -318,7 +318,7 @@
     </form>
     <button class="modal-close" type="button">Закрыть</button>
   </section>
-  <script src="js/modalFeedback.min.js"></script>
+  <script src="js/modalFeedback.js"></script>
 </body>
 
 </html>
