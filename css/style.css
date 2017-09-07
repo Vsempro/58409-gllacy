@@ -1238,10 +1238,6 @@ li.shipment {
   background-repeat: no-repeat;
 }
 
-.map iframe {
-  border: 0;
-}
-
 .contacts {
   position: absolute;
   padding-top: 30px;
@@ -1253,6 +1249,7 @@ li.shipment {
   right: 27px;
   border-radius: 10px;
   background-color: #ffffff;
+  z-index: 2001;
 }
 
 .contacts h4,
