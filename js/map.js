@@ -19,31 +19,24 @@ ymaps.ready(function () {
             iconLayout: 'default#image',
             // Своё изображение иконки метки.
             iconImageHref: 'img/pin.svg',
+            // Добавление тени.
+            iconShadow: true,
+            // Ссылка на изображение тени.
+            iconShadowImageHref: 'img/shadow.png',
             // Размеры метки.
             iconImageSize: [80, 140],
+            // Размеры тени.
+            iconShadowImageSize: [182, 110],
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
-            iconImageOffset: [-40, -140]
-        }),
-
-        shadowPlacemark = new ymaps.Placemark([59.938631, 30.323055], {
-            hintContent: 'Тень от вкусного мороженого'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: 'img/shadow.png',
-            // Размеры метки.
-            iconImageSize: [182, 110],
-            // Смещение левого верхнего угла иконки относительно
+            iconImageOffset: [-40, -140],
+            // Смещение левого верхнего угла тени относительно
             // её "ножки" (точки привязки).
-            iconImageOffset: [0, -110]
+            iconShadowImageOffset: [0, -110]
         });
 
     myMap.geoObjects
-        .add(myPlacemark)
-        .add(shadowPlacemark);
+        .add(myPlacemark);
 });
 
 
