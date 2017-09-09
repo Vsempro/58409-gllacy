@@ -1,26 +1,26 @@
 var linkFeedback = document.querySelector(".button--contacts"),
-  	modalOverlay = document.querySelector(".modal-overlay"),
-  	modalFeedback = document.querySelector(".modal-feedback"),
-  	closeFeedback = modalFeedback.querySelector(".modal-close"),
-  	formFeedback = modalFeedback.querySelector("form"),
-  	loginFeedback = modalFeedback.querySelector("[name=login]"),
-  	emailFeedback = modalFeedback.querySelector("[name=email]"),
-  	messageFeedback = modalFeedback.querySelector("[name=message]"),
-  	storageLogin = localStorage.getItem('loginFeedback')
-  	storageEmail = localStorage.getItem('emailFeedback');
+  modalOverlay = document.querySelector(".modal-overlay"),
+  modalFeedback = document.querySelector(".modal-feedback"),
+  closeFeedback = modalFeedback.querySelector(".modal-close"),
+  formFeedback = modalFeedback.querySelector("form"),
+  loginFeedback = modalFeedback.querySelector("[name=login]"),
+  emailFeedback = modalFeedback.querySelector("[name=email]"),
+  messageFeedback = modalFeedback.querySelector("[name=message]"),
+  storageLogin = localStorage.getItem('loginFeedback')
+storageEmail = localStorage.getItem('emailFeedback');
 
 linkFeedback.addEventListener('click', function(event) {
   event.preventDefault();
   modalOverlay.classList.add('modal-overlay--show');
   modalFeedback.classList.add('modal-feedback--show');
   if (storageLogin && storageEmail) {
-  	loginFeedback.value = storageLogin;
-  	emailFeedback.value = storageEmail;
-  	messageFeedback.focus();
-  } else if	(storageLogin) {
+    loginFeedback.value = storageLogin;
+    emailFeedback.value = storageEmail;
+    messageFeedback.focus();
+  } else if (storageLogin) {
     loginFeedback.value = storageLogin;
     emailFeedback.focus();
-  } else if	(storageEmail) {
+  } else if (storageEmail) {
     emailFeedback.value = storageEmail;
     loginFeedback.focus();
   } else {
